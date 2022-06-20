@@ -1,3 +1,26 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer base {
+  h1 {
+    @apply text-[4.625rem] text-accent-content font-light;
+  }
+
+  h3 {
+    @apply text-[2rem] text-accent-content;
+  }
+
+  button {
+    @apply transition-all duration-500;
+  }
+}
+
+html,
+body {
+  @apply h-full;
+}
+
+section {
+  @apply h-full;
+}
