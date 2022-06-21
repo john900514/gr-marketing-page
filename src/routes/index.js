@@ -1,17 +1,17 @@
 /** @type {import('./__types/').RequestHandler} */
 export async function get({ params }) {
-    // `params.id` comes from [id].js
-    const body = {
-        foo: "bar"
-    };
-   
-    if (body) {
-      return {
-        body 
-      };
-    }
-   
+  // `params.id` comes from [id].js
+  const body = {
+    foo: "gr benchmarking",
+  };
+
+  if (body) {
     return {
-      status: 404
+      body,
     };
   }
+
+  return {
+    status: 404,
+  };
+}

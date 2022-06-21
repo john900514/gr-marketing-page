@@ -1,27 +1,19 @@
 <script>
   import "../app.css";
   import Header from "$lib/layout/Header.svelte";
-  import Hero from "$lib/layout/Hero.svelte";
-
-  let name = "hi";
+  import Footer from "$lib/layout/Footer.svelte";
 </script>
 
+<Header />
 <main>
-  <Header />
-  <section>
-    <Hero />
-  </section>
-
   <slot />
 </main>
+<Footer />
 
 <style lang="postcss">
   main {
-    @apply grid h-full w-full;
-    grid-template-rows: repeat(3, 100%);
-
-    section {
-      @apply min-h-16;
-    }
+    @apply grid w-full bg-top grid-cols-1 bg-cover;
+    grid-template-rows: auto;
+    background-image: url(grad_bg.png);
   }
 </style>

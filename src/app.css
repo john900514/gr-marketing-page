@@ -3,6 +3,10 @@
 @tailwind utilities;
 
 @layer base {
+  :root {
+    --heroBg: url("combg/hero_bg_overlay_m.png");
+  }
+
   h1 {
     @apply text-[4.625rem] text-accent-content font-light;
   }
@@ -11,16 +15,33 @@
     @apply text-[2rem] text-accent-content;
   }
 
+  article {
+    @apply bg-[#000816] border-secondary border-4 rounded-3xl p-9;
+  }
+
   button {
     @apply transition-all duration-500;
   }
 }
 
+/* global-replaceable */
 html,
 body {
-  @apply h-full;
+  @apply h-full w-full text-accent-content;
+}
+
+body {
+  @apply overflow-hidden overflow-y-scroll scroll-smooth;
 }
 
 section {
   @apply h-full;
+}
+
+body::-webkit-scrollbar {
+  display: none;
+}
+
+body > div:first-of-type {
+  @apply relative;
 }
