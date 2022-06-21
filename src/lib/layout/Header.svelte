@@ -5,44 +5,51 @@
   import Gymrevenue from "$lib/components/icons/Gymrevenue.svelte";
 
   let userScrollPos;
+  let scrWidth;
 </script>
 
-<svelte:window bind:scrollY={userScrollPos} />
+<svelte:window bind:innerWidth={scrWidth} bind:scrollY={userScrollPos} />
 
 <header class:nav-visible={userScrollPos > 60}>
-  {#if userScrollPos > 60}
-    <div
-      class="complex"
-      in:fly={{ y: -200, duration: 250 }}
-      out:fly={{ y: -200, duration: 250 }}
-    >
-      <nav>
+  <div class="wrap">
+    {#if userScrollPos > 60 && scrWidth > 1024}
+      <div
+        class="complex"
+        in:fly={{ y: -200, duration: 600 }}
+        out:fly={{ y: -200, duration: 600 }}
+      >
+        <nav>
+          <span class="gr-icon">
+            <img src="/icons/gymrevenue.svg" alt="gym revenue" />
+          </span>
+          <ul>
+            {#each iconList as { index, name, src }, i}
+              <HeaderButton {src} text={name} />
+            {/each}
+          </ul>
+        </nav>
+      </div>
+    {:else}
+      <div
+        in:fly={{ y: -200, duration: 600 }}
+        out:fly={{ y: -200, duration: 600 }}
+        class="simple"
+      >
         <span class="gr-icon">
           <img src="/icons/gymrevenue.svg" alt="gym revenue" />
         </span>
-        <ul>
-          {#each iconList as { index, name, src }, i}
-            <HeaderButton {src} text={name} />
-          {/each}
-        </ul>
-      </nav>
-    </div>
-  {:else}
-    <div
-      in:fly={{ y: -200, duration: 250 }}
-      out:fly={{ y: -200, duration: 250 }}
-      class="simple"
-    >
-      <span class="gr-icon">
-        <img src="/icons/gymrevenue.svg" alt="gym revenue" />
-      </span>
-    </div>
-  {/if}
+      </div>
+    {/if}
+  </div>
 </header>
 
 <style>
   header {
-    @apply sticky w-full h-[7rem] top-0 z-10 bg-[#010b18];
+    @apply fixed w-full h-[7rem] top-0 z-10 bg-transparent;
+
+    div.wrap {
+      @apply relative;
+    }
 
     div.complex {
       @apply h-[7rem] absolute bg-secondary w-full;

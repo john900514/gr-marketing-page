@@ -12,7 +12,7 @@
 
 <style lang="postcss">
   main {
-    @apply grid w-full bg-top grid-cols-1 bg-cover;
+    @apply w-full bg-top bg-cover;
     grid-template-rows: auto;
     background-image: url(grad_bg.png);
   }

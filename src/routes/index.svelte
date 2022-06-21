@@ -54,12 +54,10 @@
 </script>
 
 <section class="hero-sect">
-  <div class="image">
-    <img src="/combg/hero_bg.png" alt="" />
-  </div>
-
   <Hero />
 </section>
+
+<div class="spreader-1" />
 
 <section class="btn-matrix-1">
   <ButtonMatrix {btns} title="Key Features" showbg={true} />
@@ -76,7 +74,7 @@
 </section>
 
 <section class="wig-center reporting">
-  <InfoPanel title="Widget Center">
+  <InfoPanel title="Widget Center" class="widget-panel">
     <Widget_center_icon slot="icon" />
 
     <picture>
@@ -114,9 +112,13 @@
   </InfoPanel>
 </section>
 
-<section>
+<section class="calender-masscom">
   <InfoPanel class="calendar-panel" title="Calendar" icon={callendar}>
     <Calendar_icon slot="icon" />
+    <picture>
+      <source srcset="products/calendar.png" media="(min-width: 1024px)" />
+      <img class="calendar-product" src="products/calendar_m.png" alt="" />
+    </picture>
     The calendar section is a key feature that is devoted to management of time-sensitive
     tasks, appointments, meetings, or any action that can be described as an "event"
     within your customizable experience. Users can create new events sorted into
@@ -130,6 +132,10 @@
 
   <InfoPanel class="mass-com-panel" title="Mass Communications">
     <Mass_comm_icon slot="icon" />
+    <picture>
+      <source srcset="products/masscomm.png" media="(min-width: 1024px)" />
+      <img class="masscomm-product" src="products/masscomm_m.png" alt="" />
+    </picture>
     Our Mass Communications component is designed to cater to all forms of messaging.
     Whether you are speaking directly to an individual, featuring your best promotion
     to a specific or broader audience, or creating complex decision tree journeys
@@ -144,9 +150,20 @@
   </InfoPanel>
 </section>
 
-<section>
+<section class="employeetrack-tasks">
   <InfoPanel class="emp-tracking" title="Employee Tracking">
     <Employee_tracking_icon slot="icon" />
+    <picture>
+      <source
+        srcset="products/employee_tracking.png"
+        media="(min-width: 1024px)"
+      />
+      <img
+        class="employee_tracking-product"
+        src="products/employee_tracking_m.png"
+        alt=""
+      />
+    </picture>
     GymRevenue gives owners and operators the opportunity to manage in real time
     and effectively by their employees.
     <br />
@@ -159,6 +176,11 @@
     Leaderboards are based by employee type, location, category and even customizable
     items.
   </InfoPanel>
+
+  <picture>
+    <source srcset="woman.png" media="(min-width: 1024px)" />
+    <img class="woman-divider" src="woman_m.png" alt="" />
+  </picture>
 
   <InfoPanel title="Tasks">
     <Tasks_icon slot="icon" />
@@ -230,38 +252,34 @@
 </section>
 
 <style>
+  /* HERO SECTION */
   section.hero-sect {
-    @apply flex flex-col justify-center min-h-screen;
-    /* mask-image: linear-gradient(
-      to top,
-      rgb(255, 255, 255) 70%,
-      transparent 100%
-    ); */
+    @apply flex flex-col bg-bottom bg-cover justify-end min-h-screen;
+    background-image: url("/combg/hero_bg.png");
+    background-attachment: local;
   }
 
+  /* GRADIENT OVERLAY BETWEEN SECTIONS 1 & 2 */
+  div.spreader-1 {
+    @apply absolute h-40 w-full;
+    transform: translate(0, -5rem);
+    background: linear-gradient(#000209, #000616);
+  }
+
+  /* BUTTON MATRIX SECTION */
   section.btn-matrix-1 {
+    @apply pt-4;
+
     h2 {
       @apply text-[2rem] font-bold text-center mt-4;
     }
 
     p {
-      @apply text-center;
+      @apply text-center px-10 mt-4;
     }
   }
 
-  div.image {
-    @apply w-full h-full relative flex-grow;
-    /* mask-image: linear-gradient(
-      to bottom,
-      rgb(255, 255, 255) 30%,
-      transparent 100%
-    ); */
-
-    img {
-      @apply w-full h-full object-cover;
-    }
-  }
-
+  /* WIDGET SECTION */
   section.wig-center {
     @apply pt-80 ml-4 relative z-[5];
 
@@ -271,8 +289,14 @@
     }
   }
 
+  /* GLOBAL WIDGET (sub components) */
+  :global(article.widget-panel) {
+    @apply max-w-[20rem];
+  }
+
+  /* GLOBAL REPORTING PANEL (sub components) */
   :global(article.reporting-panel) {
-    @apply mt-96 mr-4 ml-auto;
+    @apply mt-96 mr-4 ml-auto max-w-[22rem];
 
     img.reporting-product {
       @apply absolute z-[-1] max-w-[40rem] h-auto;
@@ -280,6 +304,55 @@
     }
   }
 
+  /* CALENDAR & MASS COMMUNICATIONS  */
+  section.calender-masscom {
+    @apply pt-[20rem];
+  }
+
+  /* GLOBAL CALENDAR  */
+  :global(article.calendar-panel) {
+    @apply max-w-[26rem] relative;
+
+    img.calendar-product {
+      @apply absolute h-auto max-w-[40rem] top-0 -translate-y-64 -translate-x-32;
+    }
+  }
+
+  /* GLOBAL MASS COMMUNICATIONS */
+  :global(article.mass-com-panel) {
+    @apply max-w-[26rem] mt-96 relative;
+
+    img.masscomm-product {
+      @apply absolute h-auto max-w-[40rem] top-0;
+      transform: translate(4rem, -20rem);
+    }
+  }
+
+  /* EMPLOYEE TRACKING & TASKS */
+  section.employeetrack-tasks {
+    @apply pt-72;
+
+    img.employee_tracking-product {
+      @apply absolute h-auto max-w-[40rem] top-0;
+      transform: translate(-5rem, -21rem);
+    }
+  }
+
+  /* GLOBAL EMPLOYEE TRACKING */
+  :global(article.emp-tracking) {
+    @apply relative max-w-[22rem] ml-4;
+    p {
+      @apply relative font-bold;
+    }
+  }
+
+  /* woman divider between employee tracking & tasks */
+  img.woman-divider {
+    @apply my-32;
+    transform: translate(0.8rem);
+  }
+
+  /* LAST SECTION */
   section.beforefooter {
     @apply max-h-min min-h-[75vh] py-24;
   }

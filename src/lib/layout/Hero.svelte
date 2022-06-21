@@ -13,14 +13,18 @@
 
 <style>
   div {
-    @apply mx-auto text-center -translate-y-16;
+    @apply mx-auto text-center z-[5];
 
     h1 {
       @apply text-[2.125rem] border-b-2 border-white;
     }
 
     p {
-      @apply text-base mt-4;
+      @apply text-base mt-4 px-10;
+    }
+
+    button {
+      @apply hidden;
     }
   }
 </style>

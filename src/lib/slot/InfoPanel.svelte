@@ -11,10 +11,6 @@
 </article>
 
 <style>
-  article {
-    @apply max-w-[26rem] lg:max-w-md;
-  }
-
   h3 {
     @apply text-[2rem] py-2;
   }

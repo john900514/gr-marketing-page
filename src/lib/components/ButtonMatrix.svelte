@@ -6,7 +6,7 @@
     showbg = false;
 </script>
 
-<div class="container}" class:showbg>
+<div class="container" class:showbg>
   <p>
     This Visionary single-source platform <wbr />
     seamlessly integrates all of the daily <wbr />
@@ -53,7 +53,7 @@
   } */
 
     p {
-      @apply text-center;
+      @apply text-center relative max-w-full px-6;
     }
 
     h2 {
