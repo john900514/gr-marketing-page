@@ -182,7 +182,15 @@
     <img class="woman-divider" src="woman_m.png" alt="" />
   </picture>
 
-  <InfoPanel title="Tasks">
+  <InfoPanel class="task-panel" title="Tasks">
+    <picture>
+      <source srcset="products/tasks_1.png" media="(min-width: 1024px)" />
+      <img class="tasks_1" src="products/tasks_1_m.png" alt="" />
+    </picture>
+    <picture>
+      <source srcset="products/tasks_2.png" media="(min-width: 1024px)" />
+      <img class="tasks_2" src="products/tasks_2.png" alt="" />
+    </picture>
     <Tasks_icon slot="icon" />
     Customizable for your organization to maximize your business needs. Easily add
     automatic tasks to your employee's daily responsibilities and track the competition
@@ -190,25 +198,37 @@
   </InfoPanel>
 </section>
 
-<section>
-  <InfoPanel title="Automated Drip Functionality">
+<section class="drip-leadmember">
+  <InfoPanel class="drip-panel" title="Automated Drip Functionality">
     <Auto_drip_icon slot="icon" />
+    <picture>
+      <source srcset="products/drip.png" media="(min-width: 1024px)" />
+      <img class="drip-product" src="products/drip_m.png" alt="" />
+    </picture>
     This feature enables clients to create dripp campaigns and configure their operation,
     such as linking it to an audience, linking SMS and email templates to them and
     deciding when and how often the communications should relay.
   </InfoPanel>
 
-  <InfoPanel title="Lead and Member Management">
+  <InfoPanel class="lead-panel" title="Lead and Member Management">
     <Leads_members_icon slot="icon" />
+    <picture>
+      <source srcset="products/lead.png" media="(min-width: 1024px)" />
+      <img class="lead-product" src="products/lead_m.png" alt="" />
+    </picture>
     The lead and member sourcing is a suite of independent but key features that
     log and keep track of an interested customer/consumer and their journey from
     interested party to paying member.
   </InfoPanel>
 </section>
 
-<section>
-  <InfoPanel title="Goals">
+<section class="goals-leaderboards">
+  <InfoPanel class="goals-panel" title="Goals">
     <Goals_icon slot="icon" />
+    <picture>
+      <source srcset="products/goals.png" media="(min-width: 1024px)" />
+      <img class="goals-product" src="products/goals_m.png" alt="" />
+    </picture>
     For owners & operators, goal setting has forever been a long tedious pain-point
     within their walls that takes priceless time away from their teams. GR introduces
     an effective, easy and monumental way to set goals. As easy as it is to set one,
@@ -220,8 +240,16 @@
     the system.
   </InfoPanel>
 
-  <InfoPanel title="Leaderboards">
+  <InfoPanel class="leaderboard-panel" title="Leaderboards">
     <Leaderboards_icon slot="icon" />
+    <picture>
+      <source srcset="products/leaderboard.png" media="(min-width: 1024px)" />
+      <img
+        class="leaderboard-product"
+        src="products/leaderboard_m.png"
+        alt=""
+      />
+    </picture>
     Leaderboards are customizable based on what is important to focus on. Easily
     change categories on a monthly basis to drive specific categories of the business.
     <br />
@@ -240,7 +268,7 @@
 </section>
 
 <section class="btn-matrix-2">
-  <ButtonMatrix btns={btns2} title="Coming Soon..." />
+  <ButtonMatrix btns={btns2} title="Coming Soon..." showbg={false} />
   <h3>And MUCH More...</h3>
 </section>
 
@@ -338,6 +366,16 @@
     }
   }
 
+  img.tasks_1 {
+    @apply absolute h-auto max-w-[40rem] top-0 z-[1];
+    transform: translate(5rem, -5rem);
+  }
+
+  img.tasks_2 {
+    @apply absolute h-auto max-w-[20rem] top-0;
+    transform: translate(0rem, -18rem);
+  }
+
   /* GLOBAL EMPLOYEE TRACKING */
   :global(article.emp-tracking) {
     @apply relative max-w-[22rem] ml-4;
@@ -348,12 +386,68 @@
 
   /* woman divider between employee tracking & tasks */
   img.woman-divider {
-    @apply my-32;
+    @apply mb-96 mt-48;
     transform: translate(0.8rem);
+  }
+
+  /* GLOBAL TASKS */
+  :global(article.task-panel) {
+    @apply relative max-w-[22rem];
+  }
+
+  /* AUTOMATED DRIP & MEMBER MANAGEMENT */
+  section.drip-leadmember {
+    @apply py-64;
+
+    img.drip-product {
+      @apply absolute h-auto max-w-[40rem] top-0;
+      transform: translate(-10rem, -16rem);
+    }
+
+    img.lead-product {
+      @apply absolute h-auto max-w-[50rem] scale-110 top-0;
+      transform: translate(-20rem, -20rem);
+    }
+  }
+
+  /* GLOBAL DRIP */
+  :global(article.drip-panel) {
+    @apply relative max-w-[22rem];
+  }
+
+  /* GLOBAL LEAD */
+  :global(article.lead-panel) {
+    @apply relative max-w-[22rem] mt-64 pt-16;
+  }
+
+  :global(article.goals-panel) {
+    @apply relative max-w-[24rem] pt-16 mr-4 ml-auto;
+  }
+
+  section.goals-leaderboards {
+    img.goals-product {
+      @apply absolute h-auto max-w-[40rem] top-0;
+      transform: translate(0rem, -15rem);
+    }
+
+    img.leaderboard-product {
+      @apply absolute h-auto max-w-[40rem] top-0;
+      transform: translate(-18rem, -22rem);
+    }
+  }
+
+  :global(article.leaderboard-panel) {
+    @apply relative max-w-[22rem] mt-64 mb-28;
+  }
+
+  section.btn-matrix-2 {
+    h3 {
+      @apply mt-8 text-center font-bold;
+    }
   }
 
   /* LAST SECTION */
   section.beforefooter {
-    @apply max-h-min min-h-[75vh] py-24;
+    @apply max-h-min min-h-screen py-24;
   }
 </style>

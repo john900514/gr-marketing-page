@@ -57,7 +57,7 @@
 
 <style>
   form {
-    @apply bg-neutral-900 border-4 border-secondary rounded-3xl;
+    @apply bg-neutral-900 border-4 border-secondary rounded-3xl mb-8;
     @apply flex flex-col px-12 py-4;
 
     fieldset {

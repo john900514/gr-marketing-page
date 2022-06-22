@@ -7,17 +7,19 @@
 </script>
 
 <div class="container" class:showbg>
-  <p>
-    This Visionary single-source platform <wbr />
-    seamlessly integrates all of the daily <wbr />
-    tasks and data that gym owners and <wbr />
-    operators need to accurately assess <wbr />
-    operations & performance. With ONE <wbr />
-    simple login, GymRevenue gives you the <wbr />
-    ability to switch between GR <wbr />
-    components to gain critical insight into <wbr />
-    your organization.
-  </p>
+  {#if showbg}
+    <p>
+      This Visionary single-source platform <wbr />
+      seamlessly integrates all of the daily <wbr />
+      tasks and data that gym owners and <wbr />
+      operators need to accurately assess <wbr />
+      operations & performance. With ONE <wbr />
+      simple login, GymRevenue gives you the <wbr />
+      ability to switch between GR <wbr />
+      components to gain critical insight into <wbr />
+      your organization.
+    </p>
+  {/if}
 
   <h2>{title}</h2>
 
