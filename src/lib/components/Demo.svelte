@@ -57,8 +57,8 @@
 
 <style>
   form {
-    @apply bg-neutral-900 border-4 border-secondary rounded-3xl mb-8;
-    @apply flex flex-col px-12 py-4;
+    @apply bg-neutral-900 border-4 border-secondary rounded-3xl mb-8 mx-auto max-w-[30rem] lg:max-w-[50rem];
+    @apply flex flex-col px-12 py-4 lg:mb-[10rem];
 
     fieldset {
       @apply leading-none my-4 mb-4;

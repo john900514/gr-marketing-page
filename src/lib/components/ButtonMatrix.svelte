@@ -21,7 +21,7 @@
   let mobile_btns = [mobile_grp1, mobile_grp2, mobile_grp3, mobile_grp4];
 </script>
 
-<div class="container" class:showbg>
+<div class="container mob" class:showbg>
   {#if showbg}
     <p>
       This Visionary single-source platform <wbr />
@@ -75,7 +75,7 @@
   </div>
 </div>
 <!-- desktop below -->
-<div class="container desktop" class:showbg>
+<div class="desktop" class:showbg>
   {#if showbg}
     <p>
       This Visionary single-source platform <wbr />
@@ -101,22 +101,19 @@
       {/each}
     </div>
   </div>
-
-  <div class="m-btn-group">
-    <span>o</span>
-    <span>o</span>
-    <span>o</span>
-  </div>
 </div>
 
 <style>
   div.desktop {
-    @apply hidden lg:block;
-  }
+    @apply hidden lg:block text-center;
 
-  div.showbg {
-    @apply bg-cover bg-no-repeat;
-    background-image: url("combg/matrix1_m_bg.png");
+    p {
+      @apply lg:max-w-[42rem] lg:pb-24 mx-auto hidden lg:block;
+    }
+
+    h2 {
+      @apply lg:text-[2.5rem] lg:mb-6;
+    }
   }
 
   div.container {
@@ -168,13 +165,16 @@
   div.matrix-container {
   }
 
+  div.mob {
+    @apply block lg:hidden;
+  }
+
   div.btn-matrix {
-    @apply grid gap-6 px-28 items-center w-[80rem];
-    grid-template-rows: repeat(3, 6.25rem);
-    grid-template-columns: repeat(4, minmax(0, 14.5rem));
+    @apply hidden  md:grid gap-6 items-center justify-center tracking-[0];
 
     @media (min-width: 1024px) {
-      grid-template-columns: repeat(3, minmax(0, 14.5rem));
+      grid-template-columns: repeat(3, minmax(0, 20rem));
+      grid-template-rows: repeat(4, 6rem);
     }
   }
 </style>

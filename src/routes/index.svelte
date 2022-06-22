@@ -182,6 +182,11 @@
     <img class="woman-divider" src="woman_m.png" alt="" />
   </picture>
 
+  <picture>
+    <source srcset="combg/reporting_bg.png" media="(min-width: 1024px" />
+    <img class="shoddy-img-hack" src="combg/reporting_bg.png" alt="" />
+  </picture>
+
   <InfoPanel class="task-panel" title="Tasks">
     <picture>
       <source srcset="products/tasks_1.png" media="(min-width: 1024px)" />
@@ -201,8 +206,9 @@
 <section class="drip-leadmember">
   <InfoPanel class="drip-panel" title="Automated Drip Functionality">
     <Auto_drip_icon slot="icon" />
+
     <picture>
-      <source srcset="products/drip.png" media="(min-width: 1024px)" />
+      <source srcset="products/calendar.png" media="(min-width: 1024px)" />
       <img class="drip-product" src="products/drip_m.png" alt="" />
     </picture>
     This feature enables clients to create dripp campaigns and configure their operation,
@@ -210,16 +216,27 @@
     deciding when and how often the communications should relay.
   </InfoPanel>
 
+  <picture>
+    <source srcset="combg/calendar_bg.png" media="(min-width: 1024px" />
+    <img class="dripbg" src="combg/calendar_bg.png" alt="" />
+  </picture>
+
   <InfoPanel class="lead-panel" title="Lead and Member Management">
     <Leads_members_icon slot="icon" />
     <picture>
       <source srcset="products/lead.png" media="(min-width: 1024px)" />
       <img class="lead-product" src="products/lead_m.png" alt="" />
     </picture>
+
     The lead and member sourcing is a suite of independent but key features that
     log and keep track of an interested customer/consumer and their journey from
     interested party to paying member.
   </InfoPanel>
+
+  <picture>
+    <source srcset="combg/employee_bg.png" media="(min-width: 1024px" />
+    <img class="employbg" src="combg/employee_bg.png" alt="" />
+  </picture>
 </section>
 
 <section class="goals-leaderboards">
@@ -282,103 +299,125 @@
 <style>
   /* HERO SECTION */
   section.hero-sect {
-    @apply flex flex-col bg-bottom bg-cover justify-end min-h-screen;
+    @apply flex flex-col bg-bottom bg-cover justify-end lg:justify-center min-h-screen bg-[#000616];
     background-image: url("/combg/hero_bg.png");
     background-attachment: local;
+    background-blend-mode: lighten;
   }
 
   /* GRADIENT OVERLAY BETWEEN SECTIONS 1 & 2 */
   div.spreader-1 {
-    @apply absolute h-40 w-full;
+    @apply absolute h-40 w-full lg:hidden;
     transform: translate(0, -5rem);
     background: linear-gradient(#000209, #000616);
   }
 
   /* BUTTON MATRIX SECTION */
   section.btn-matrix-1 {
-    @apply pt-4;
+    @apply pt-4 lg:bg-top;
+    background-color: #000616;
+    background-image: url("/combg/matrix1_bg.png");
 
     h2 {
       @apply text-[2rem] font-bold text-center mt-4;
     }
 
     p {
-      @apply text-center px-10 mt-4;
+      @apply text-center px-10 mt-4 lg:max-w-[45rem] lg:mx-auto lg:py-16;
     }
   }
 
   /* WIDGET SECTION */
   section.wig-center {
-    @apply pt-80 ml-4 relative z-[5];
+    @apply pt-80 ml-4 mr-auto relative z-[5] bg-no-repeat bg-bottom;
 
     img.widget-product {
-      @apply absolute max-w-[40rem] h-auto;
-      transform: translate(-10rem, -29rem);
+      @apply absolute max-w-[40rem] lg:max-w-[80rem] h-auto translate-x-[-10rem] translate-y-[-29rem];
+      @apply lg:right-0 lg:translate-x-[62rem] lg:translate-y-[-28rem];
+    }
+
+    @media (min-width: 1024px) {
+      background-image: url("/combg/reporting_bg.png");
     }
   }
 
   /* GLOBAL WIDGET (sub components) */
   :global(article.widget-panel) {
-    @apply max-w-[20rem];
+    @apply max-w-[20rem] lg:max-w-[40rem] lg:pr-[20rem];
   }
 
   /* GLOBAL REPORTING PANEL (sub components) */
   :global(article.reporting-panel) {
-    @apply mt-96 mr-4 ml-auto max-w-[22rem];
+    @apply mt-96 lg:mt-[40rem] mr-4 ml-auto max-w-[22rem] lg:max-w-[28rem];
 
     img.reporting-product {
-      @apply absolute z-[-1] max-w-[40rem] h-auto;
-      transform: translate(-4rem, -27.5rem);
+      @apply absolute z-[-1] max-w-[40rem] lg:max-w-[50rem] h-auto translate-x-[-4rem] translate-y-[-27.5rem];
+      @apply lg:translate-x-[-34rem] lg:translate-y-[-30rem] lg:left-0;
+    }
+
+    p {
+      @apply relative lg:relative;
     }
   }
 
   /* CALENDAR & MASS COMMUNICATIONS  */
   section.calender-masscom {
-    @apply pt-[20rem];
+    @apply pt-[20rem] lg:pb-96;
+    background-image: url("/combg/calendar_bg.png"),
+      url("/combg/reporting_bg.png");
+    background-repeat: no-repeat;
+    background-position: top center, bottom center;
   }
 
   /* GLOBAL CALENDAR  */
   :global(article.calendar-panel) {
-    @apply max-w-[26rem] relative;
+    @apply max-w-[26rem] lg:max-w-[28rem] lg:ml-[4rem] relative ml-4 mr-auto;
 
     img.calendar-product {
-      @apply absolute h-auto max-w-[40rem] top-0 -translate-y-64 -translate-x-32;
+      @apply absolute h-auto max-w-[40rem] lg:max-w-[65rem] top-0 -translate-y-64 -translate-x-32;
+      @apply lg:translate-x-[10rem] lg:translate-y-[0];
     }
   }
 
   /* GLOBAL MASS COMMUNICATIONS */
   :global(article.mass-com-panel) {
-    @apply max-w-[26rem] mt-96 relative;
+    @apply max-w-[26rem] lg:max-w-[30rem] mt-96 relative mr-4 ml-auto;
 
     img.masscomm-product {
-      @apply absolute h-auto max-w-[40rem] top-0;
-      transform: translate(4rem, -20rem);
+      @apply absolute h-auto max-w-[40rem] top-0 translate-x-[4rem] translate-y-[-20rem];
+      @apply lg:max-w-[60rem] lg:right-0 lg:translate-x-[-18rem] lg:mt-36;
     }
   }
 
   /* EMPLOYEE TRACKING & TASKS */
   section.employeetrack-tasks {
-    @apply pt-72;
+    @apply pt-72 bg-no-repeat;
+    background-image: url("combg/employee_bg.png");
+    background-position-y: 30rem;
 
     img.employee_tracking-product {
-      @apply absolute h-auto max-w-[40rem] top-0;
-      transform: translate(-5rem, -21rem);
+      @apply absolute h-auto max-w-[40rem] lg:max-w-[80rem] lg:left-0 top-0;
+      @apply translate-x-[-5rem] translate-y-[-21rem] lg:translate-x-[14rem] lg:translate-y-[-32rem];
     }
   }
 
   img.tasks_1 {
     @apply absolute h-auto max-w-[40rem] top-0 z-[1];
-    transform: translate(5rem, -5rem);
+    @apply translate-x-[5rem] translate-y-[-5rem] lg:translate-x-[-25rem] lg:translate-y-[18rem];
   }
 
   img.tasks_2 {
-    @apply absolute h-auto max-w-[20rem] top-0;
-    transform: translate(0rem, -18rem);
+    @apply absolute h-auto max-w-[20rem] top-0 translate-x-0 translate-y-[-18rem];
+    @apply lg:translate-x-[-40rem] lg:translate-y-[0rem] lg:max-w-[60rem];
+  }
+
+  img.shoddy-img-hack {
+    @apply absolute object-none max-w-[200rem] translate-x-[-80rem] translate-y-[-10rem] w-[300rem] rotate-180;
   }
 
   /* GLOBAL EMPLOYEE TRACKING */
   :global(article.emp-tracking) {
-    @apply relative max-w-[22rem] ml-4;
+    @apply relative max-w-[22rem] lg:max-w-[40rem] ml-4 lg:pr-[12rem];
     p {
       @apply relative font-bold;
     }
@@ -386,58 +425,79 @@
 
   /* woman divider between employee tracking & tasks */
   img.woman-divider {
-    @apply mb-96 mt-48;
-    transform: translate(0.8rem);
+    @apply mb-96 mt-48 mx-auto lg:max-w-[60rem] lg:mt-[25rem];
   }
 
   /* GLOBAL TASKS */
   :global(article.task-panel) {
-    @apply relative max-w-[22rem];
+    @apply relative max-w-[22rem] mr-auto ml-4 lg:ml-auto lg:mr-[5rem];
   }
 
   /* AUTOMATED DRIP & MEMBER MANAGEMENT */
   section.drip-leadmember {
-    @apply py-64;
+    @apply py-64 lg:pt-[80rem] lg:min-h-[300vh];
+
+    img.dripbg {
+      @apply absolute object-contain max-w-[150rem] w-[300rem] max-h-[80rem] rotate-[4deg] scale-x-[1] translate-x-[-40rem] translate-y-[-30rem];
+    }
 
     img.drip-product {
-      @apply absolute h-auto max-w-[40rem] top-0;
-      transform: translate(-10rem, -16rem);
+      @apply absolute h-auto max-w-[40rem] lg:max-w-[80rem] top-0;
+      @apply translate-x-[-10rem] translate-y-[26rem];
+      @apply lg:translate-x-[10rem] lg:translate-y-[-25rem];
     }
 
     img.lead-product {
-      @apply absolute h-auto max-w-[50rem] scale-110 top-0;
-      transform: translate(-20rem, -20rem);
+      @apply absolute h-auto max-w-[50rem] lg:max-w-[90rem] scale-110 top-0 translate-x-[-20rem] translate-y-[-20rem];
+      @apply lg:translate-x-[-80rem] lg:translate-y-[-20rem] z-[1];
+    }
+
+    img.employbg {
+      @apply absolute object-cover max-w-[100rem];
     }
   }
 
   /* GLOBAL DRIP */
   :global(article.drip-panel) {
-    @apply relative max-w-[22rem];
+    @apply relative max-w-[22rem] ml-auto mr-4 lg:ml-[5rem] lg:pb-[5rem] lg:max-w-[50rem] lg:pr-[12rem];
+    @apply z-[8];
+
+    p {
+      @apply relative;
+    }
   }
 
   /* GLOBAL LEAD */
   :global(article.lead-panel) {
-    @apply relative max-w-[22rem] mt-64 pt-16;
+    @apply relative max-w-[22rem] lg:max-w-[30rem] mt-64 pt-16 ml-4 mr-auto lg:mt-[60rem];
+    @apply lg:mr-12 lg:ml-auto;
   }
 
   :global(article.goals-panel) {
-    @apply relative max-w-[24rem] pt-16 mr-4 ml-auto;
+    @apply relative max-w-[24rem] lg:max-w-[30rem] lg:pr-20 pt-16 mr-4 ml-auto lg:mx-auto lg:ml-[5rem];
   }
 
   section.goals-leaderboards {
+    @apply lg:pt-[30rem] bg-no-repeat bg-left;
+    background-image: url("combg/calendar_bg.png");
+    background-attachment: local;
+    background-size: 130% 50%;
+    background-position-x: center;
+    background-position-y: left;
+
     img.goals-product {
-      @apply absolute h-auto max-w-[40rem] top-0;
-      transform: translate(0rem, -15rem);
+      @apply absolute h-auto max-w-[40rem] lg:max-w-[80rem] top-0 translate-y-[-15rem] translate-x-0;
+      @apply lg:translate-x-[12rem] lg:translate-y-[-20rem];
     }
 
     img.leaderboard-product {
-      @apply absolute h-auto max-w-[40rem] top-0;
-      transform: translate(-18rem, -22rem);
+      @apply absolute h-auto max-w-[40rem] top-0 lg:max-w-[80rem] translate-x-[-18rem] translate-y-[-22rem];
+      @apply lg:translate-x-[-75rem] lg:translate-y-[-30rem];
     }
   }
 
   :global(article.leaderboard-panel) {
-    @apply relative max-w-[22rem] mt-64 mb-28;
+    @apply relative max-w-[22rem] mt-64 mb-28 ml-4 mr-auto lg:max-w-[26rem] lg:mr-[3rem] lg:ml-auto;
   }
 
   section.btn-matrix-2 {
@@ -449,5 +509,9 @@
   /* LAST SECTION */
   section.beforefooter {
     @apply max-h-min min-h-screen py-24;
+
+    img {
+      @apply lg:w-[40rem] mx-auto;
+    }
   }
 </style>

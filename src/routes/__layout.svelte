@@ -14,6 +14,7 @@
   main {
     @apply w-full bg-top bg-cover;
     grid-template-rows: auto;
-    background-image: url(grad_bg.png);
+    background-color: #000616;
+    /* background-image: url(grad_bg.png); */
   }
 </style>

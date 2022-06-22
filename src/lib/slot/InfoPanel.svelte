@@ -7,7 +7,7 @@
     <slot name="icon" />
   </div>
   <h3>{title}</h3>
-  <p><slot /></p>
+  <p class="relative"><slot /></p>
 </article>
 
 <style>
