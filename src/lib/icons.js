@@ -10,14 +10,34 @@ export const tasks = "icons/tasks_icon.svg";
 export const widgetCenter = "icons/widget_center_icon.svg";
 
 export const iconList = [
-  { index: 0, name: "widget center", src: widgetCenter },
-  { index: 1, name: "reporting", src: reporting },
-  { index: 2, name: "calendar", src: callendar },
-  { index: 3, name: "mass communication", src: satellite },
-  { index: 4, name: "employee tracking", src: threedudes },
-  { index: 5, name: "tasks", src: tasks },
-  { index: 6, name: "auto drip", src: messageBubbles },
-  { index: 7, name: "leads/members", src: leadmembers },
-  { index: 8, name: "goals", src: clipboard },
-  { index: 9, name: "leaderboards", src: leaderboard },
+  { index: 0, name: "widget center", src: widgetCenter, id: "#Widget Center" },
+  { index: 1, name: "reporting", src: reporting, id: "#Reporting" },
+  { index: 2, name: "calendar", src: callendar, id: "#Calendar" },
+  {
+    index: 3,
+    name: "mass communication",
+    src: satellite,
+    id: "#Mass Communications",
+  },
+  {
+    index: 4,
+    name: "employee tracking",
+    src: threedudes,
+    id: "#Employee Tracking",
+  },
+  { index: 5, name: "tasks", src: tasks, id: "#Tasks" },
+  {
+    index: 6,
+    name: "auto drip",
+    src: messageBubbles,
+    id: "#Automated Drip Functionality",
+  },
+  {
+    index: 7,
+    name: "leads/members",
+    src: leadmembers,
+    id: "#Lead and Member Management",
+  },
+  { index: 8, name: "goals", src: clipboard, id: "#Goals" },
+  { index: 9, name: "leaderboards", src: leaderboard, id: "#Leaderboards" },
 ];

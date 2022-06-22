@@ -305,18 +305,27 @@
     background-blend-mode: lighten;
   }
 
-  /* GRADIENT OVERLAY BETWEEN SECTIONS 1 & 2 */
-  div.spreader-1 {
-    @apply absolute h-40 w-full lg:hidden;
-    transform: translate(0, -5rem);
-    background: linear-gradient(#000209, #000616);
-  }
-
   /* BUTTON MATRIX SECTION */
   section.btn-matrix-1 {
-    @apply pt-4 lg:bg-top;
+    @apply pt-4 lg:bg-top bg-no-repeat;
+    background-position-y: 65%;
     background-color: #000616;
     background-image: url("/combg/matrix1_bg.png");
+
+    /*  this works to fade the image but affects the entire element, so will
+    need to use some sort of pseudo element or just throw an <img> in there
+    mask-image: linear-gradient(
+      to bottom,
+      rgba(0, 0, 0, 1) 70%,
+      transparent 100%
+    );
+    */
+
+    @media (min-width: 1024px) {
+      background-image: url("/combg/matrix1_bg.png");
+      background-attachment: local;
+      background-size: 130% 80%;
+    }
 
     h2 {
       @apply text-[2rem] font-bold text-center mt-4;

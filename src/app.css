@@ -27,7 +27,7 @@
 /* global-replaceable */
 html,
 body {
-  @apply h-full w-full text-accent-content;
+  @apply h-full w-full text-accent-content scroll-smooth;
 }
 
 body {

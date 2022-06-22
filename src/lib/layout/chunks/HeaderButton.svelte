@@ -1,27 +1,28 @@
 <script>
   let hovering = false;
 
-  export let text, src;
+  export let text, src, id;
 </script>
 
-<li
+<a
+  href={id}
   on:mouseenter={() => (hovering = true)}
   on:mouseleave={() => (hovering = false)}
 >
-  <button>
+  <p>
     <img {src} alt />
-  </button>
+  </p>
   {#if hovering}
     <span>{text}</span>
   {/if}
-</li>
+</a>
 
 <style>
-  li {
+  a {
     @apply text-accent-content flex flex-col h-16 w-16 items-center justify-end;
     @apply hover:bg-primary;
 
-    button {
+    p {
       img {
         @apply pb-2;
       }

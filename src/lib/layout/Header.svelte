@@ -23,8 +23,8 @@
             <img src="/icons/gymrevenue.svg" alt="gym revenue" />
           </span>
           <ul>
-            {#each iconList as { index, name, src }, i}
-              <HeaderButton {src} text={name} />
+            {#each iconList as { id, name, src }, i}
+              <HeaderButton {src} text={name} {id} />
             {/each}
           </ul>
         </nav>
