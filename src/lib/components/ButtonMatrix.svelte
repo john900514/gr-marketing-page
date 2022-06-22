@@ -1,12 +1,81 @@
 <script>
+  import { onMount } from "svelte";
   import GridButton from "$lib/slot/GridButton.svelte";
 
   export let btns,
     title = "",
     showbg = false;
+
+  let Carousel; // for saving Carousel component class
+  let carousel; // for calling methods of the carousel instance
+  onMount(async () => {
+    const module = await import("svelte-carousel");
+    Carousel = module.default;
+  });
+
+  let mobile_grp1 = [btns[0], btns[1], btns[2]];
+  let mobile_grp2 = [btns[3], btns[4], btns[5]];
+  let mobile_grp3 = [btns[6], btns[7], btns[8]];
+  let mobile_grp4 = [btns[9], btns[10], btns[11]];
+
+  let mobile_btns = [mobile_grp1, mobile_grp2, mobile_grp3, mobile_grp4];
 </script>
 
 <div class="container" class:showbg>
+  {#if showbg}
+    <p>
+      This Visionary single-source platform <wbr />
+      seamlessly integrates all of the daily <wbr />
+      tasks and data that gym owners and <wbr />
+      operators need to accurately assess <wbr />
+      operations & performance. With ONE <wbr />
+      simple login, GymRevenue gives you the <wbr />
+      ability to switch between GR <wbr />
+      components to gain critical insight into <wbr />
+      your organization.
+    </p>
+  {/if}
+
+  <h2>{title}</h2>
+
+  <div class="matrix-container">
+    <svelte:component
+      this={Carousel}
+      bind:this={carousel}
+      particlesToShow={1}
+      particlesToScroll={1}
+      arrows={false}
+      let:currentPageIndex
+      let:pagesCount
+      let:showPage
+    >
+      <div slot="dots" class="mydots">
+        {#each mobile_btns as _, pageIndex (pageIndex)}
+          <button
+            class="swipebtn"
+            on:click={() => showPage(pageIndex)}
+            active={currentPageIndex === pageIndex}
+          />
+        {/each}
+      </div>
+      {#each mobile_btns as btn, i (btn)}
+        <div class="matrix-col">
+          <GridButton>
+            {btn[0]}
+          </GridButton>
+          <GridButton>
+            {btn[1]}
+          </GridButton>
+          <GridButton>
+            {btn[2]}
+          </GridButton>
+        </div>
+      {/each}
+    </svelte:component>
+  </div>
+</div>
+<!-- desktop below -->
+<div class="container desktop" class:showbg>
   {#if showbg}
     <p>
       This Visionary single-source platform <wbr />
@@ -41,6 +110,10 @@
 </div>
 
 <style>
+  div.desktop {
+    @apply hidden lg:block;
+  }
+
   div.showbg {
     @apply bg-cover bg-no-repeat;
     background-image: url("combg/matrix1_m_bg.png");
@@ -71,8 +144,28 @@
     }
   }
 
+  button.swipebtn {
+    @apply mx-4 h-8 w-8 rounded-full bg-accent-content border border-secondary;
+  }
+
+  button.swipebtn[active="true"] {
+    @apply bg-transparent;
+  }
+
+  .mydots {
+    @apply py-8;
+  }
+
+  div.matrix-col {
+    @apply px-4 justify-center;
+    grid-template-columns: auto;
+  }
+
+  :global(.matrix-col button) {
+    @apply h-28 my-4 w-full block;
+  }
+
   div.matrix-container {
-    @apply overflow-x-scroll;
   }
 
   div.btn-matrix {
