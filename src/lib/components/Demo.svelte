@@ -1,59 +1,90 @@
 <script>
+  let submitted;
   let form = {
     name: "",
-    bemail: "",
+    email: "",
     mobile: "",
     receive_news: false,
   };
 
-  async function onSubmit(event) {
-    console.log("submit it", form);
-  }
+  const handleSubmit = async () => {
+    // Send a POST request to src/routes/contact.js endpoint
+    const response = await fetch("/contact", {
+      method: "POST",
+      body: JSON.stringify(form),
+      headers: { "content-type": "application/json" },
+    });
+
+    const json = await response.json();
+    submitted = true;
+  };
 </script>
 
-<form on:submit|preventDefault={onSubmit}>
-  <h3>Schedule a free demo</h3>
+{#if !submitted}
+  <form on:submit|preventDefault={handleSubmit} method="post">
+    <h3>Schedule a free demo</h3>
 
-  <div class="textfields">
-    <label for="name">name</label>
-    <input bind:value={form.name} id="name" type="text" />
-
-    <label for="b_email">business e-mail</label>
-    <input bind:value={form.bemail} id="b_email" type="text" />
-
-    <label for="mobile">mobile</label>
-    <input bind:value={form.mobile} id="mobile" type="text" />
-  </div>
-
-  <fieldset>
-    <legend
-      >I'd like to occasionally receive exciting content and product
-      opportunities related to the fitness management industry.</legend
-    >
-
-    <div class="choices">
+    <div class="textfields">
+      <label for="name">name</label>
       <input
-        bind:group={form.receive_news}
-        value={true}
-        type="radio"
-        id="yes"
-        name="solicit"
+        bind:value={form.name}
+        id="name"
+        name="name"
+        type="text"
+        required
       />
-      <label for="yes">Yes</label>
 
+      <label for="b_email">business e-mail</label>
       <input
-        bind:group={form.receive_news}
-        value={false}
-        type="radio"
-        id="no"
-        name="solicit"
+        bind:value={form.email}
+        id="b_email"
+        name="email"
+        type="email"
+        required
       />
-      <label for="no">no</label>
+
+      <label for="mobile">mobile</label>
+      <input
+        bind:value={form.mobile}
+        id="mobile"
+        name="mobile"
+        type="tel"
+        required
+      />
     </div>
-  </fieldset>
 
-  <button type="submit">NEXT</button>
-</form>
+    <fieldset>
+      <legend
+        >I'd like to occasionally receive exciting content and product
+        opportunities related to the fitness management industry.</legend
+      >
+
+      <div class="choices">
+        <input
+          bind:group={form.receive_news}
+          value={true}
+          type="radio"
+          id="yes"
+          name="solicit"
+        />
+        <label for="yes">Yes</label>
+
+        <input
+          bind:group={form.receive_news}
+          value={false}
+          type="radio"
+          id="no"
+          name="solicit"
+        />
+        <label for="no">no</label>
+      </div>
+    </fieldset>
+
+    <button type="submit">NEXT</button>
+  </form>
+{:else}
+  <div class="wrap"><div class="submitted">Your message has been sent to our team</div> </div>
+{/if}
 
 <style>
   form {
@@ -108,5 +139,12 @@
       @apply hover:bg-accent-content hover:text-secondary;
       @apply active:scale-95 active:opacity-50 active:shadow-sm;
     }
+  }
+
+  .submitted{
+    @apply alert alert-success;
+  }
+  .wrap{
+    @apply container m-auto my-8;
   }
 </style>

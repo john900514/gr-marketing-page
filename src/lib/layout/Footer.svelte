@@ -6,9 +6,9 @@
 </script>
 
 <footer>
-  <div class="cool-animation-thing">
+  <!-- <div class="cool-animation-thing">
     <span>logo animation</span>
-  </div>
+  </div> -->
 
   <Gymrevenue />
 
