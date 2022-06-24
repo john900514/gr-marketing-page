@@ -9,6 +9,7 @@
 		"prepare": "svelte-kit sync"
 	},
 	"devDependencies": {
+		"@fontsource/mulish": "^4.5.11",
 		"@sveltejs/adapter-auto": "next",
 		"@sveltejs/kit": "next",
 		"autoprefixer": "^10.4.7",

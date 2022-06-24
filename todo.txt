@@ -14,7 +14,7 @@ LATER:
 - Setup Vite plugin or Svelte preprocessor to use optmized/compressed images.
 - Factor out API keys and Mailgun config to into secure env vars.
 - Add in css nano and other prod only optimizations
-- if we are using any custom fonts, preload them
+- preload mullish font
 - See if we can figure out how to deploy to Lambda@edge + cloudfront/s3 via a custom BB pipeline
 - Reveal animations for the sexy polish
 - Consider using Segment server side in order to store contact form data in one of our DBs.

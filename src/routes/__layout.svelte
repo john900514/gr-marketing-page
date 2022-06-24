@@ -1,8 +1,34 @@
 <script>
+  import "@fontsource/mulish"; // Defaults to weight 400.
   import "../app.css";
   import Header from "$lib/layout/Header.svelte";
   import Footer from "$lib/layout/Footer.svelte";
 </script>
+
+<!-- TODO: preload Mullish -->
+<!-- <svelte:head>
+	<link
+		rel="preload"
+		href="/fonts/poppins-latin-400-normal.woff2"
+		as="font"
+		type="font/woff2"
+		crossorigin="anonymous"
+	/>
+	<link
+		rel="preload"
+		href="/fonts/poppins-latin-600-normal.woff2"
+		as="font"
+		type="font/woff2"
+		crossorigin="anonymous"
+	/>
+	<link
+		rel="preload"
+		href="/fonts/poppins-latin-700-normal.woff2"
+		as="font"
+		type="font/woff2"
+		crossorigin="anonymous"
+	/>
+</svelte:head> -->
 
 <Header />
 <main class="flex flex-col flex-grow">
