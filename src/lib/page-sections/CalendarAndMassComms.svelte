@@ -2,11 +2,11 @@
   import InfoPanel from "$lib/slot/InfoPanel.svelte";
   import Calendar_icon from "$lib/components/icons/Calendar_icon.svelte";
   import Mass_comm_icon from "$lib/components/icons/Mass_comm_icon.svelte";
-  import { callendar } from "$lib/icons";
+  import CalendarIcon from "$lib/components/icons/Calendar_icon.svelte";
 </script>
 
 <section>
-  <InfoPanel class="max-w-[26rem] lg:max-w-[28rem] lg:ml-[4rem] relative ml-4 mr-auto" title="Calendar" icon={callendar}>
+  <InfoPanel class="max-w-[26rem] lg:max-w-[28rem] lg:ml-[4rem] relative ml-4 mr-auto" title="Calendar" icon={CalendarIcon}>
     <Calendar_icon slot="icon" />
     <picture>
       <source srcset="products/calendar.png" media="(min-width: 1024px)" />

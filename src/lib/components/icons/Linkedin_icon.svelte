@@ -4,7 +4,7 @@
       <rect id="Rectangle_7009" data-name="Rectangle 7009" width="20.781" height="20.791" fill="#0074c8"/>
     </clipPath>
   </defs>
-  <ellipse id="Ellipse_15" data-name="Ellipse 15" cx="20" cy="20" rx="20" ry="20" fill="#fff"/>
+  <ellipse id="Ellipse_15" data-name="Ellipse 15" cx="20" cy="20" rx="20" ry="20" fill="currentColor"/>
   <g id="Group_3446" data-name="Group 3446" transform="translate(10 8.681)">
     <rect id="Rectangle_7008" data-name="Rectangle 7008" width="4.29" height="13.861" transform="translate(0.412 6.93)" fill="#0074c8"/>
     <g id="Group_3447" data-name="Group 3447">

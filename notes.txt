@@ -14,3 +14,5 @@
 - fixed tailwind classes not working on components. the config was only searching routes, not the rest of src
 - hid some of the pictures that are not visible in the mobile XD, but were causing horizontal overflow on mobile
 - applied a global section css rule of overflow-hidden to fix the rest of horizontal overflow on mobile
+- changed icons from fill="#fff" to currentColor so we can change to blue in Info Panels
+- changed Icons from being loaded in an img tag to being loaded inline, so we can style the fill color.

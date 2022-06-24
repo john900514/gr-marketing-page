@@ -17,10 +17,12 @@
   ];
 </script>
 
-<section>
+<section class="flex flex-col space-y-16">
   <ButtonMatrix {btns} title="Key Features" showbg={true} />
 
   <h2 class="text-[2rem] font-bold text-center mt-4">And so much more!</h2>
+  <a href="#demo" class="btn btn-outline rounded uppercase mx-auto">schedule your demo</a>
+
   <p>
     With One-click, be able to effortlessly <wbr />
     switch between CRM, CMS, Point-of-sale, <wbr />
@@ -54,11 +56,11 @@
     }
 
     h2 {
-      @apply text-[2rem] font-bold text-center mt-4;
+      @apply text-[2rem] font-bold text-center;
     }
 
     p {
-      @apply text-center px-10 mt-4 lg:max-w-[45rem] lg:mx-auto lg:py-16;
+      @apply text-center px-10 lg:max-w-[45rem] lg:mx-auto ;
     }
   }
 </style>

@@ -20,11 +20,11 @@
       >
         <nav>
           <span class="gr-icon">
-            <img src="/icons/gymrevenue.svg" alt="gym revenue" />
+            <Gymrevenue/>
           </span>
           <ul>
-            {#each iconList as { id, name, src }, i}
-              <HeaderButton {src} text={name} {id} />
+            {#each iconList as { id, name, icon }, i}
+              <HeaderButton {icon} text={name} {id} />
             {/each}
           </ul>
         </nav>
@@ -36,7 +36,7 @@
         class="simple"
       >
         <span class="gr-icon">
-          <img src="/icons/gymrevenue.svg" alt="gym revenue" />
+          <Gymrevenue/>
         </span>
       </div>
     {/if}

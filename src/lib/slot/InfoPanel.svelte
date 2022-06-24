@@ -2,7 +2,7 @@
   export let title = "Title";
 </script>
 
-<article id={title} class="info-panel {$$props.class}">
+<article id={title} class="info-panel {$$restProps.class}">
   <div class="icon">
     <slot name="icon" />
   </div>

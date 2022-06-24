@@ -5,6 +5,7 @@ ASAP:
 - add in the Video
 - Swiper instead of Carousel for overhang
 - favicon GR logo.
+- fix cutoff icons
 
 LATER:
 - Get rid of warnings

@@ -2,7 +2,7 @@
   import DemoForm from "$lib/components/DemoForm.svelte";
 </script>
 
-<section class="demo">
+<section class="demo" id="demo">
   <DemoForm />
 </section>
 

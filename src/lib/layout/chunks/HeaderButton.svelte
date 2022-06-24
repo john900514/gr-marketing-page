@@ -1,7 +1,7 @@
 <script>
   let hovering = false;
 
-  export let text, src, id;
+  export let text, icon, id;
 </script>
 
 <a
@@ -9,9 +9,7 @@
   on:mouseenter={() => (hovering = true)}
   on:mouseleave={() => (hovering = false)}
 >
-  <p>
-    <img {src} alt />
-  </p>
+    <svelte:component this={icon} />
   {#if hovering}
     <span>{text}</span>
   {/if}
@@ -21,12 +19,6 @@
   a {
     @apply text-accent-content flex flex-col h-16 w-16 items-center justify-end;
     @apply hover:bg-primary;
-
-    p {
-      img {
-        @apply pb-2;
-      }
-    }
 
     span {
       @apply absolute bottom-4;
