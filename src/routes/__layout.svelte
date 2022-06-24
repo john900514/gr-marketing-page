@@ -5,16 +5,22 @@
 </script>
 
 <Header />
-<main>
+<main class="flex flex-col flex-grow">
   <slot />
+  <div class="flex-grow" />
+  <Footer />
 </main>
-<Footer />
 
-<style lang="postcss">
-  main {
-    @apply w-full bg-top bg-cover;
-    grid-template-rows: auto;
-    background-color: #000616;
-    /* background-image: url(grad_bg.png); */
+<style>
+  :global(#app) {
+    background: rgb(0, 9, 22);
+    background: linear-gradient(
+      180deg,
+      rgba(0, 9, 22, 1) 0%,
+      rgba(3, 47, 78, 1) 24%,
+      rgba(1, 75, 129, 1) 59%,
+      rgba(23, 40, 52, 1) 91%,
+      rgba(0, 1, 7, 1) 100%
+    );
   }
 </style>

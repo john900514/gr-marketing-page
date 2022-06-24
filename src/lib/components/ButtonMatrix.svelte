@@ -9,7 +9,11 @@
   let Carousel; // for saving Carousel component class
   let carousel; // for calling methods of the carousel instance
   onMount(async () => {
+    console.log(1);
     const module = await import("svelte-carousel");
+    console.log(12);
+    console.log(module);
+
     Carousel = module.default;
   });
 
@@ -103,7 +107,7 @@
   </div>
 </div>
 
-<style>
+<style lang="postcss">
   div.desktop {
     @apply hidden lg:block text-center;
 

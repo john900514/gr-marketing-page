@@ -43,16 +43,16 @@
   </div>
 </header>
 
-<style>
+<style lang="postcss">
   header {
-    @apply fixed w-full h-[7rem] top-0 z-10 bg-transparent;
+    @apply sticky top-0 w-full h-32 z-10 bg-transparent;
 
     div.wrap {
       @apply relative;
     }
 
     div.complex {
-      @apply h-[7rem] absolute bg-secondary w-full;
+      @apply h-32 absolute bg-secondary w-full;
 
       nav {
         @apply h-full flex items-center justify-center;
@@ -67,7 +67,7 @@
     }
 
     div.simple {
-      @apply h-[7rem] bg-secondary w-full absolute;
+      @apply h-32 bg-secondary w-full absolute;
 
       span {
         @apply flex flex-col h-full justify-center mx-auto lg:mx-0;

@@ -17,7 +17,7 @@
   {/if}
 </a>
 
-<style>
+<style lang="postcss">
   a {
     @apply text-accent-content flex flex-col h-16 w-16 items-center justify-end;
     @apply hover:bg-primary;

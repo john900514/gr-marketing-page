@@ -1,0 +1,16 @@
+- Specifically used daisy theme "black", so we get the black background + white text by default, and don't include the other themes we aren't using
+- added css cano on prod build to optimize/minify
+- modified layout so that even a page that has little to no content - the footer will always be stuck to the bottom, and the header stuck to the top
+- modified header to use sticky so that scroll achors work better (no gap) / content under the header
+- modified tailwind breakpoints to use rem (better for accessability)
+- renamed Demo to DemoForm to better describe the component
+- added a few more (2x) images for larger screens to reduce pixelation
+- made grid button matrix thing render a div if no handler is provided, because it seems like its broken when it shows a pointor cursor but does nothing.
+- added lang="postcss" where missing for better IDE syntax highlighting
+- added the bg gradient
+- broke out the index page sections into their own components.  This makes it much easier to read, as the files are shorter, and the css can be greatly simplified since its scoped to just that one file.
+- switched out some pngs with jpegs where we didn't need an alpha channel
+- added more mobile / 2x verions of certain images
+- fixed tailwind classes not working on components. the config was only searching routes, not the rest of src
+- hid some of the pictures that are not visible in the mobile XD, but were causing horizontal overflow on mobile
+- applied a global section css rule of overflow-hidden to fix the rest of horizontal overflow on mobile

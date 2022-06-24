@@ -1,4 +1,5 @@
 <div>
+  <img src="/combg/hero_bg_m.jpg" alt="" class="lg:hidden"/>
   <h1>Gym Revenue</h1>
   <p>
     GymRevenue is the new cloud-based platform & <wbr />
@@ -8,25 +9,25 @@
     solution that is ACTUALLY an all-in-one solution.
   </p>
 
-  <button>WATCH THE VIDEO</button>
+  <!-- <button>WATCH THE VIDEO</button> -->
 </div>
 
-<style>
+<style lang="postcss">
   div {
     @apply mx-auto text-center z-[5] lg:max-w-[30rem];
     @apply lg:ml-[50%];
 
     h1 {
-      @apply text-[2.125rem] lg:text-[4.625rem] border-b-2 border-white lg:border-transparent;
+      @apply text-[2.125rem] lg:text-[4.625rem] lg:border-transparent;
     }
 
     p {
       @apply text-base mt-4 px-10;
     }
 
-    button {
+    /* button {
       @apply hidden lg:block bg-secondary px-6 py-2 mt-12 rounded-full font-bold tracking-widest;
       @apply lg:mx-auto;
-    }
+    } */
   }
 </style>

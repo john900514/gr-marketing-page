@@ -1,0 +1,28 @@
+************* TODO:
+ASAP:
+- fix mobile text content being cut off
+- fix mobile horizontal overflow issue
+- add in the Video
+- Swiper instead of Carousel for overhang
+- favicon GR logo.
+
+LATER:
+- Get rid of warnings
+- fluid type / font size
+- Setup dotenv to init serverside so that we have ability to load private env vars securely to serverless endpoints, and still be ommited from the client bundle
+- Setup Vite plugin or Svelte preprocessor to use optmized/compressed images.
+- Factor out API keys and Mailgun config to into secure env vars.
+- Add in css nano and other prod only optimizations
+- if we are using any custom fonts, preload them
+- See if we can figure out how to deploy to Lambda@edge + cloudfront/s3 via a custom BB pipeline
+- Reveal animations for the sexy polish
+- Consider using Segment server side in order to store contact form data in one of our DBs.
+- Path Trace logo animation on initial visit.
+- Run a Lighthouse, make sure we are doing everything in our power to optimize
+- make the circle of icons at the bottom of the page real buttons that work
+- make the circle of icons at bottom of page have a cool reveal animation
+- look at switching out our static backgrounds with WebGL/Canvas based animations.
+- Use svelte-kit auto import plugin to cleanupo and reduce code
+- move dependencies to dev dependencies, since the compiled version of this app has no prod specific dependencies
+- optimize how it looks on huge screens (4k, ultrawide, etc)
+- consolidate icons into single dir with indexed export

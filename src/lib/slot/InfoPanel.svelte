@@ -10,7 +10,7 @@
   <p class="relative"><slot /></p>
 </article>
 
-<style>
+<style lang="postcss">
   h3 {
     @apply text-[2rem] py-2;
   }

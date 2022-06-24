@@ -59,11 +59,24 @@ const colors = {
 
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-  content: ["./src/routes/**/*.{svelte,js,ts}"],
+  content: ["./src/**/*.{svelte,js,ts}"],
   theme: {
+    screens: {
+      sm: '43rem',//phones
+      md: '63rem',//tablets
+      lg: '82rem',//desktop
+      xl: '102rem',//big desktop
+      '2xl': '160rem',//fucking huge desktop
+    },
+    container: {
+      center: true,
+    },
     extend: {
       colors,
     },
+  },
+  daisyui: {
+    themes: ['black']
   },
   plugins: [require("daisyui")],
 };

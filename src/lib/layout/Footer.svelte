@@ -25,9 +25,9 @@
   <sup>Copyright &#169 2022. All rights reserved by GymRevenue </sup>
 </footer>
 
-<style>
+<style lang="postcss">
   footer {
-    @apply py-8 absolute bottom-0 w-full text-center;
+    @apply py-8 text-center;
 
     nav {
       @apply py-4;

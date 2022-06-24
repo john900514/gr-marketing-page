@@ -3,7 +3,7 @@
   import ButtonMatrix from "$lib/components/ButtonMatrix.svelte";
   import Header from "$lib/layout/Header.svelte";
   import Hero from "$lib/layout/Hero.svelte";
-  import Demo from "$lib/components/Demo.svelte";
+  import DemoForm from "$lib/components/DemoForm.svelte";
 
   import { widgetCenter, reporting, callendar } from "$lib/icons";
 
@@ -17,6 +17,7 @@
   import Leads_members_icon from "$lib/components/icons/Leads_members_icon.svelte";
   import Goals_icon from "$lib/components/icons/Goals_icon.svelte";
   import Leaderboards_icon from "$lib/components/icons/Leaderboards_icon.svelte";
+import WidgetCenterAndReporting from "$lib/page-sections/WidgetCenterAndReporting.svelte";
 
   let btns = [
     "Customer relationship management",
@@ -72,6 +73,8 @@
     and so much more!
   </p>
 </section>
+
+<!-- <WidgetCenterAndReporting/> -->
 
 <section class="wig-center reporting">
   <InfoPanel title="Widget Center" class="widget-panel">
@@ -281,7 +284,7 @@
 </section>
 
 <section class="demo">
-  <Demo />
+  <DemoForm />
 </section>
 
 <section class="btn-matrix-2">

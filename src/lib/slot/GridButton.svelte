@@ -1,15 +1,22 @@
 <script>
-  export let handler;
+  export let handler = null;
 </script>
 
-<button>
-  <slot />
-</button>
+{#if handler}
+  <button on:click={handler}>
+    <slot />
+  </button>
+{:else}
+  <div>
+    <slot />
+  </div>
+{/if}
 
-<style>
-  button {
+<style lang="postcss">
+  button,
+  div {
     @apply text-secondary bg-neutral-900 text-[1rem] leading-[1.2] lg:leading-none lg:text-lg font-bold uppercase;
     @apply border-4 border-secondary rounded-2xl h-full px-8 duration-150;
-    @apply hover:bg-accent-content hover:text-secondary;
+    @apply hover:bg-accent-content hover:text-secondary flex items-center justify-center;
   }
 </style>
