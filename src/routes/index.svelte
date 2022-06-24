@@ -2,11 +2,16 @@
   import {
     HeroSection,
     KeyFeatures,
-    WidgetCenterAndReporting,
-    CalendarAndMassComms,
-    EmployeeTrackingAndTasks,
-    DripsAndLeadMemberMgmt,
-    GoalsAndLeaderboards,
+    WidgetSection,
+    ReportingSection,
+    CalendarSection,
+    MassCommsSection,
+    EmployeeSection,
+    TaskSection,
+    DripSection,
+    LeadAndMemberSection,
+    GoalsSection,
+    LeaderboardSection,
     UpcomingFeatures,
     DemoSection
   } from "$lib/page-sections";
@@ -17,15 +22,25 @@
 
 <KeyFeatures/>
 
-<WidgetCenterAndReporting />
+<WidgetSection />
 
-<CalendarAndMassComms />
+<ReportingSection />
 
-<EmployeeTrackingAndTasks />
+<CalendarSection/>
 
-<DripsAndLeadMemberMgmt />
+<MassCommsSection />
 
-<GoalsAndLeaderboards />
+<EmployeeSection />
+
+<TaskSection />
+
+<DripSection />
+
+<LeadAndMemberSection />
+
+<GoalsSection />
+
+<LeaderboardSection/>
 
 <DemoSection/>
 

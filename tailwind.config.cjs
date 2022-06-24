@@ -66,7 +66,7 @@ module.exports = {
       md: '63rem',//tablets
       lg: '82rem',//desktop
       xl: '102rem',//big desktop
-      '2xl': '160rem',//fucking huge desktop
+      '2xl': '132rem',//fucking huge desktop
     },
     container: {
       center: true,

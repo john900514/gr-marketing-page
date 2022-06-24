@@ -6,36 +6,7 @@
 </script>
 
 <section>
-  <InfoPanel class="emp-tracking relative max-w-[22rem] lg:max-w-[40rem] ml-4 lg:pr-[12rem]" title="Employee Tracking">
-    <Employee_tracking_icon slot="icon" />
-    <picture>
-      <source
-        srcset="products/employee_tracking.png"
-        media="(min-width: 1024px)"
-      />
-      <img
-        class="employee_tracking-product"
-        src="products/employee_tracking_m.png"
-        alt=""
-      />
-    </picture>
-    GymRevenue gives owners and operators the opportunity to manage in real time
-    and effectively by their employees.
-    <br />
-    <br />
-    Specifically filter between top performers and employees who need more training
-    and development pertaining to specific areas in their role. point out these opportunities
-    before it is too late.
-    <br />
-    <br />
-    Leaderboards are based by employee type, location, category and even customizable
-    items.
-  </InfoPanel>
 
-  <!-- <picture>
-    <source srcset="woman.png" media="(min-width: 1024px)" />
-    <img class="woman-divider" src="woman_m.png" alt="" />
-  </picture> -->
 
   <picture class="hidden lg:block">
     <source srcset="combg/reporting_bg.png" media="(min-width: 1024px" />

@@ -8,10 +8,7 @@
 
 <style>
   section{
-    @apply pt-4 lg:bg-top bg-no-repeat;
-    background-position-y: 65%;
-    background-color: #000616;
-    background-image: url("/combg/matrix1_bg.png");
+    @apply pt-4;
 
     /*  this works to fade the image but affects the entire element, so will
     need to use some sort of pseudo element or just throw an <img> in there
@@ -22,7 +19,7 @@
     );
     */
 
-    @media (min-width: 1024px) {
+    @screen md {
       background-image: url("/combg/matrix1_bg.png");
       background-attachment: local;
       background-size: 130% 80%;
