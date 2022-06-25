@@ -1,6 +1,6 @@
 <script>
   import ButtonMatrix from "$lib/components/ButtonMatrix.svelte";
-import PageSection from "$lib/components/PageSection.svelte";
+  import PageSection from "$lib/components/PageSection.svelte";
 
   let btns = [
     "Customer relationship management",
@@ -19,12 +19,21 @@ import PageSection from "$lib/components/PageSection.svelte";
 </script>
 
 <PageSection class="flex flex-col space-y-16">
-  <img src="/combg/matrix1_bg.png" slot="pre-container" alt="" class="hidden md:block pointer-events-none transform -translate-y-[35%] inset-x-0 bottom-0 absolute w-full filter mix-blend-screen scale-[150%]"/>
+  <img
+    src="/combg/matrix1_bg.png"
+    slot="pre-container"
+    alt=""
+    class="hidden md:block pointer-events-none transform -translate-y-[35%] inset-x-0 bottom-0 absolute w-full filter mix-blend-screen scale-[150%]"
+  />
 
   <ButtonMatrix {btns} title="Key Features" showbg={true} />
-
-  <h2 class="text-[2rem] font-bold text-center mt-4">And so much more!</h2>
-  <a href="#demo" class="btn btn-outline rounded uppercase mx-auto my-8">schedule your demo</a>
+  <div class="px-4 w-full max-w-[40rem]">
+    <a
+      href="#demo"
+      class="btn btn-outline w-full h-32 flex items-center justify-center text-xl md:text-3xl md:w-auto btn-lg  rounded-lg font-bold uppercase mx-auto my-8"
+      >schedule your demo</a
+    >
+  </div>
 
   <p class="p-8 md:px-32 lg:px-64 lg:mx-16">
     With One-click, be able to effortlessly <wbr />
@@ -37,7 +46,7 @@ import PageSection from "$lib/components/PageSection.svelte";
 </PageSection>
 
 <style>
-  section{
+  section {
     @apply pt-4 lg:bg-top bg-no-repeat;
     background-position-y: 65%;
     background-color: #000616;
@@ -56,7 +65,7 @@ import PageSection from "$lib/components/PageSection.svelte";
     }
 
     p {
-      @apply text-center px-10 lg:max-w-[45rem] lg:mx-auto ;
+      @apply text-center px-10 lg:max-w-[45rem] lg:mx-auto;
     }
   }
 </style>
