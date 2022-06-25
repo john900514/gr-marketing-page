@@ -1,4 +1,5 @@
 <section class="{$$restProps.class}">
+    <slot name="pre-container"/>
     <div class="container flex flex-col items-center">
         <slot/>
     </div>

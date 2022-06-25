@@ -5,6 +5,8 @@
 </script>
 
 <PageSection class="pt-8 md:min-h-[600px] md:py-64 lg:py-64">
+  <img src="/combg/reporting_bg.png" slot="pre-container" alt="" class="hidden md:block pointer-events-none transform -translate-y-[35%] inset-x-0 bottom-0 absolute w-full filter mix-blend-screen scale-[140%]"/>
+
   <picture class="md:hidden">
     <source srcset="products/reporting.png" media="(min-width: 30rem)" />
     <img

@@ -4,7 +4,8 @@
   import PageSection from "$lib/components/PageSection.svelte";
 </script>
 
-<PageSection class="pt-8 md:min-h-[600px] md:py-64 lg:py-64">
+<PageSection class="pt-8 md:min-h-[600px] md:py-32">
+  <img slot="pre-container" src="/combg/calendar_bg.png" alt="" class="hidden md:block pointer-events-none object-cover absolute transform -translate-x-[20%] scale-x-[170%]  -rotate rotate-[160deg] -left-[5%] bottom-0  w-[140vw] filter mix-blend-screen"/>
   <picture class="md:hidden">
     <source srcset="products/goals.png" media="(min-width: 30rem)" />
     <img class="goal-product-mobile" src="products/goals_m.png" alt="" />

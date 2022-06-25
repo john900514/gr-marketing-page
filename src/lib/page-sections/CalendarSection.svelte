@@ -5,7 +5,9 @@
   import PageSection from "$lib/components/PageSection.svelte";
 </script>
 
-<PageSection class="pt-8 md:min-h-[600px] md:py-64 lg:py-64">
+<PageSection class="pt-8 md:min-h-[600px] md:py-32">
+  <img slot="pre-container" src="/combg/calendar_bg.png" alt="" class="hidden md:block pointer-events-none object-cover absolute transform translate-x-[20%] scale-x-[170%] -left-[5%] bottom-0  w-[140vw] filter mix-blend-screen"/>
+
   <picture class="md:hidden">
     <source srcset="products/calendar.png" media="(min-width: 30rem)" />
     <img class="calendar-product-mobile" src="products/calendar_m.png" alt="" />
@@ -13,13 +15,13 @@
 
   <InfoPanel
     title="Calendar"
-    class="mx-[4vw] w-full max-w-[92vw] md:w-1/2 md:max-w-[40rem] md:pr-[10rem] transform md:-translate-x-[36%] lg:max-w-[50rem] mb-16 md:mb-64 lg:mb-128"
+    class="mx-[4vw] w-full max-w-[92vw] md:w-1/2 md:max-w-[30rem] transform md:-translate-x-[66%] mb-16 md:mb-64 lg:mb-128"
   >
     <Calendar_icon slot="icon" />
     <div class="hidden md:block calendar-product">
       <picture>
         <source srcset="products/calendar.png" media="(min-width: 30rem)" />
-        <img class="calendar-product" src="products/calendar_m.png" alt="" />
+        <img class="h-full w-auto" src="products/calendar_m.png" alt="" />
       </picture>
     </div>
 
@@ -47,7 +49,7 @@
   }
 
   .calendar-product {
-    @apply absolute left-full transform -translate-x-[25%] -translate-y-[10%] -inset-y-32;
+    @apply absolute left-full transform -translate-x-[15%] translate-y-[25%] -inset-y-32 max-w-[50rem];
     width: max-content;
   }
 

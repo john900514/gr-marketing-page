@@ -4,7 +4,7 @@
   import PageSection from "$lib/components/PageSection.svelte";
 </script>
 
-<PageSection class="pt-8 md:min-h-[600px] md:py-64 lg:py-64">
+<PageSection class="pt-8 md:min-h-[600px] md:pt-64">
   <picture class="md:hidden">
     <source srcset="products/leaderboard.png" media="(min-width: 30rem)" />
     <img class="leaderboard-product-mobile" src="products/leaderboard_m.png" alt="" />

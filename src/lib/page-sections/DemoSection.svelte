@@ -1,10 +1,13 @@
 <script>
   import DemoForm from "$lib/components/DemoForm.svelte";
+import PageSection from "$lib/components/PageSection.svelte";
 </script>
 
-<section class="demo" id="demo">
+<PageSection class="demo" id="demo">
+  <img src="/combg/reporting_bg.png" slot="pre-container" alt="" class="hidden md:block pointer-events-none transform -translate-y-[35%] inset-x-0 bottom-0 absolute w-full filter mix-blend-screen"/>
+
   <DemoForm />
-</section>
+</PageSection>
 
 <style>
   section{
@@ -18,12 +21,6 @@
       transparent 100%
     );
     */
-
-    @screen md {
-      background-image: url("/combg/matrix1_bg.png");
-      background-attachment: local;
-      background-size: 130% 80%;
-    }
 
     h2 {
       @apply text-[2rem] font-bold text-center mt-4;

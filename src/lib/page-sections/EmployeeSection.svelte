@@ -4,7 +4,8 @@
   import Employee_tracking_icon from "$lib/components/icons/Employee_tracking_icon.svelte";
 </script>
 
-<PageSection class="pt-8 md:min-h-[600px] md:py-64 lg:py-64">
+<PageSection class="pt-8 md:min-h-[600px] md:py-32">
+  <img src="/combg/employee_bg.png" slot="pre-container"  alt="" class="hidden pointer-events-none md:block transform -translate-y-[35%] inset-x-0 bottom-0 absolute w-full filter mix-blend-screen"/>
   <picture class="md:hidden">
     <source
       srcset="products/employee_tracking.png"

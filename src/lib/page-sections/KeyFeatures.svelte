@@ -1,5 +1,6 @@
 <script>
   import ButtonMatrix from "$lib/components/ButtonMatrix.svelte";
+import PageSection from "$lib/components/PageSection.svelte";
 
   let btns = [
     "Customer relationship management",
@@ -17,13 +18,15 @@
   ];
 </script>
 
-<section class="flex flex-col space-y-16">
+<PageSection class="flex flex-col space-y-16">
+  <img src="/combg/matrix1_bg.png" slot="pre-container" alt="" class="hidden md:block pointer-events-none transform -translate-y-[35%] inset-x-0 bottom-0 absolute w-full filter mix-blend-screen scale-[150%]"/>
+
   <ButtonMatrix {btns} title="Key Features" showbg={true} />
 
   <h2 class="text-[2rem] font-bold text-center mt-4">And so much more!</h2>
-  <a href="#demo" class="btn btn-outline rounded uppercase mx-auto">schedule your demo</a>
+  <a href="#demo" class="btn btn-outline rounded uppercase mx-auto my-8">schedule your demo</a>
 
-  <p>
+  <p class="p-8">
     With One-click, be able to effortlessly <wbr />
     switch between CRM, CMS, Point-of-sale, <wbr />
     Business intelligence & data visualization, <wbr />
@@ -31,7 +34,7 @@
     cloud, Mass communications, agreement builders, automated lead & member journeys
     and so much more!
   </p>
-</section>
+</PageSection>
 
 <style>
   section{
@@ -48,13 +51,6 @@
       transparent 100%
     );
     */
-
-    @media (min-width: 1024px) {
-      background-image: url("/combg/matrix1_bg.png");
-      background-attachment: local;
-      background-size: 130% 80%;
-    }
-
     h2 {
       @apply text-[2rem] font-bold text-center;
     }

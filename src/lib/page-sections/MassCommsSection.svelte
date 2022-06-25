@@ -5,7 +5,10 @@ import PageSection from "$lib/components/PageSection.svelte";
 </script>
 
 
-<PageSection class="pt-8 md:min-h-[600px] md:pb-64 md:pt-32 lg:pb-[40%]">
+<PageSection class="pt-8 md:min-h-[600px] md:pb-64 md:pt-32 lg:pb-[32rem]">
+
+  <img src="/combg/reporting_bg.png" slot="pre-container" alt="" class="hidden md:block pointer-events-none transform -translate-y-[35%] inset-x-0 bottom-0 absolute w-full filter mix-blend-screen scale-[120%]"/>
+
   <picture class="md:hidden">
     <source srcset="products/masscomm.png" media="(min-width: 30rem)" />
     <img
@@ -52,7 +55,7 @@ import PageSection from "$lib/components/PageSection.svelte";
   .masscomm-product {
     @apply absolute -z-[1] right-full transform translate-x-[5%] translate-y-[50%] top-0 -bottom-64;
     @screen lg{
-      @apply  translate-x-[5%] translate-y-[50%];
+      @apply  translate-x-[15%] translate-y-[17%];
     }
     width: max-content;
   }

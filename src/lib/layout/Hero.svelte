@@ -1,5 +1,4 @@
 <div>
-  <img src="/combg/hero_bg_m.jpg" alt="" class="lg:hidden"/>
   <h1>Gym Revenue</h1>
   <p>
     GymRevenue is the new cloud-based platform & <wbr />
@@ -22,7 +21,7 @@
     }
 
     p {
-      @apply text-base mt-4 px-10;
+      @apply text-base mt-4 px-8;
     }
 
     /* button {

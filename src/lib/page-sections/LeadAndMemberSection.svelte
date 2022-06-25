@@ -4,7 +4,8 @@
   import PageSection from "$lib/components/PageSection.svelte";
 </script>
 
-<PageSection class="pt-8 md:min-h-[600px] md:py-64 lg:py-64">
+<PageSection class="pt-8 md:min-h-[600px] md:py-32">
+  <img src="/combg/employee_bg.png" alt="" slot="pre-container" class="hidden md:block transform -translate-y-[35%] pointer-events-none inset-x-0 bottom-0 absolute w-full filter mix-blend-screen"/>
   <picture class="md:hidden">
     <source srcset="products/lead.png" media="(min-width: 30rem)" />
     <img class="lead-product-mobile" src="products/lead_m.png" alt="" />

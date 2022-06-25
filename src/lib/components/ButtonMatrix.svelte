@@ -42,7 +42,7 @@
 
   <h2>{title}</h2>
 
-  <div class="matrix-container">
+  <div class="matrix-container ">
     <svelte:component
       this={Carousel}
       bind:this={carousel}
@@ -79,7 +79,7 @@
   </div>
 </div>
 <!-- desktop below -->
-<div class="desktop" class:showbg>
+<div class="desktop relative z-[1]" class:showbg>
   {#if showbg}
     <p>
       This Visionary single-source platform <wbr />
