@@ -15,7 +15,7 @@
 
   <InfoPanel
     title="Calendar"
-    class="mx-[4vw] w-full max-w-[92vw] md:w-1/2 md:max-w-[30rem] transform md:-translate-x-[66%] mb-16 md:mb-64 lg:mb-128"
+    class="mr-[8vw] w-full max-w-[92vw] md:w-1/2 md:max-w-[30rem] transform md:-translate-x-[66%] mb-16 md:mb-64 lg:mb-128"
   >
     <Calendar_icon slot="icon" />
     <div class="hidden md:block calendar-product">

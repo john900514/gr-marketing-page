@@ -26,7 +26,7 @@ import PageSection from "$lib/components/PageSection.svelte";
   <h2 class="text-[2rem] font-bold text-center mt-4">And so much more!</h2>
   <a href="#demo" class="btn btn-outline rounded uppercase mx-auto my-8">schedule your demo</a>
 
-  <p class="p-8">
+  <p class="p-8 md:px-32 lg:px-64 lg:mx-16">
     With One-click, be able to effortlessly <wbr />
     switch between CRM, CMS, Point-of-sale, <wbr />
     Business intelligence & data visualization, <wbr />

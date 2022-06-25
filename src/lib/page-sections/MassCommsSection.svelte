@@ -5,7 +5,7 @@ import PageSection from "$lib/components/PageSection.svelte";
 </script>
 
 
-<PageSection class="pt-8 md:min-h-[600px] md:pb-64 md:pt-32 lg:pb-[32rem]">
+<PageSection class="pt-8 md:min-h-[600px] md:pb-[20rem] md:pt-32 lg:pb-[32rem]">
 
   <img src="/combg/reporting_bg.png" slot="pre-container" alt="" class="hidden md:block pointer-events-none transform -translate-y-[35%] inset-x-0 bottom-0 absolute w-full filter mix-blend-screen scale-[120%]"/>
 
@@ -20,7 +20,7 @@ import PageSection from "$lib/components/PageSection.svelte";
 
   <InfoPanel
     class_="mt-96 lg:mt-[40rem] mr-4 ml-auto max-w-[22rem] lg:max-w-[28rem] relative z-1"
-    class="mx-[4vw] w-full max-w-[92vw] md:w-1/2 md:max-w-[25rem] transform md:translate-x-[70%] lg:max-w-[32rem]"
+    class="ml-[8vw] w-full max-w-[92vw] md:w-1/2 md:max-w-[25rem] transform md:translate-x-[70%] lg:max-w-[32rem]"
     title="Mass Communications"
   >
   <Mass_comm_icon slot="icon" />
@@ -53,7 +53,7 @@ import PageSection from "$lib/components/PageSection.svelte";
   }
 
   .masscomm-product {
-    @apply absolute -z-[1] right-full transform translate-x-[5%] translate-y-[50%] top-0 -bottom-64;
+    @apply absolute -z-[1] right-full transform translate-x-[5%] translate-y-[8rem] top-0 -bottom-64 scale-75 lg:scale-100;
     @screen lg{
       @apply  translate-x-[15%] translate-y-[17%];
     }

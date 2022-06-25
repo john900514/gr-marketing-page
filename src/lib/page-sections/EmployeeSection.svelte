@@ -19,7 +19,7 @@
   </picture>
   <InfoPanel
     title="Employee Tracking"
-    class="mx-[4vw] w-full max-w-[92vw] md:w-1/2 md:max-w-[40rem] md:pr-[10rem] transform md:-translate-x-[36%] lg:max-w-[50rem] mb-16 md:mb-64 lg:mb-128"
+    class="ml-[4vw] mr-[12vw] w-full max-w-[88vw] md:w-1/2 md:max-w-[40rem] md:pr-[10rem] transform md:-translate-x-[36%] lg:max-w-[50rem] mb-16 md:mb-64 lg:mb-128"
   >
     <Employee_tracking_icon slot="icon" />
     <div class="hidden md:block employee_tracking-product">

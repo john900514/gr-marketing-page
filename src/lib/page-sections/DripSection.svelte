@@ -4,7 +4,7 @@
   import PageSection from "$lib/components/PageSection.svelte";
 </script>
 
-<PageSection class="pt-8 md:min-h-[600px] md:pt-64 pb-32">
+<PageSection class="pt-16 md:min-h-[600px] pb-8 md:pt-64 md:pb-32">
   <img slot="pre-container" src="/combg/calendar_bg.png" alt="" class="hidden md:block pointer-events-none object-cover absolute transform translate-x-[20%] scale-x-[170%]  -rotate -rotate-[160deg] -left-[5%] bottom-0  w-[140vw] filter mix-blend-screen"/>
   <picture class="md:hidden">
     <source srcset="products/drip.png"  media="(min-width: 30rem)" />

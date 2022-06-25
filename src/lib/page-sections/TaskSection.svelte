@@ -7,10 +7,10 @@ import PageSection from "$lib/components/PageSection.svelte";
 
 <PageSection class="pt-8 md:min-h-[600px] md:pt-32 md:pb-[32rem]">
   <picture class="md:hidden">
-    <source srcset="products/tasks_2.png" media="(min-width: 30rem)" />
+    <!-- <source srcset="products/tasks_2.png" media="(min-width: 30rem)" /> -->
     <img
       class="task-product-mobile"
-      src="products/tasks_2_m.png"
+      src="products/tasks_2.png"
       alt=""
     />
   </picture>
@@ -29,7 +29,7 @@ import PageSection from "$lib/components/PageSection.svelte";
 
   <InfoPanel
     class_="mt-96 lg:mt-[40rem] mr-4 ml-auto max-w-[22rem] lg:max-w-[28rem] relative z-1"
-    class="mx-[4vw] w-full max-w-[92vw] md:w-1/2 md:max-w-[22rem] transform md:translate-x-[79%] md:translate-y-[-20%]"
+    class="mr-[8vw] w-full max-w-[92vw] md:w-1/2 md:max-w-[22rem] transform md:translate-x-[79%] md:translate-y-[-20%]"
     title="Tasks"
   >
   <Tasks_icon slot="icon" />

@@ -18,7 +18,7 @@
 
   <InfoPanel
     class_="mt-96 lg:mt-[40rem] mr-4 ml-auto max-w-[22rem] lg:max-w-[28rem] relative z-1"
-    class="mx-[4vw] w-full max-w-[92vw] md:w-1/2 md:max-w-[40rem] md:pr-[10rem] transform md:translate-x-[36%] lg:max-w-[50rem]"
+    class="ml-[12vw] mr-[4vw] w-full max-w-[86vw] md:w-1/2 md:max-w-[40rem] md:pr-[10rem] transform md:translate-x-[36%] lg:max-w-[50rem]"
     title="Reporting"
   >
     <Reporting_icon slot="icon" />

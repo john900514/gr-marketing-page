@@ -45,7 +45,7 @@
   }
 
   .goal-product {
-    @apply absolute left-full transform -translate-x-[25%]  -inset-y-[36%];
+    @apply absolute left-full transform -translate-x-[25%]  -inset-y-[36%] scale-75 lg:scale-100;
     width: max-content;
   }
 </style>
