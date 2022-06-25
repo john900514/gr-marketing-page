@@ -9,9 +9,7 @@
   let Carousel; // for saving Carousel component class
   let carousel; // for calling methods of the carousel instance
   onMount(async () => {
-    console.log(1);
     const module = await import("svelte-carousel");
-    console.log(12);
     console.log(module);
 
     Carousel = module.default;
@@ -42,7 +40,7 @@
 
   <h2>{title}</h2>
 
-  <div class="matrix-container ">
+  <div class="matrix-container">
     <svelte:component
       this={Carousel}
       bind:this={carousel}
