@@ -3,7 +3,7 @@
   import PageSection from "$lib/components/PageSection.svelte";
 
   let btns = [
-    "Customer relationship management",
+    "CRM",
     "client management system",
     "business intelligence & feature specific reporting",
     "billing & processing",
