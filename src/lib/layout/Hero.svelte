@@ -1,5 +1,5 @@
 <div>
-  <h1>Gym Revenue</h1>
+  <h1>GymRevenue</h1>
   <p>
     GymRevenue is the new cloud-based platform & <wbr />
     application that is revolutionizing how gym owners & <wbr />

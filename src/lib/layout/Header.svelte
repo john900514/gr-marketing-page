@@ -20,9 +20,9 @@
       >
         <nav>
           <span class="gr-icon">
-            <Gymrevenue/>
+            <Gymrevenue />
           </span>
-          <ul>
+          <ul class="mt-2">
             {#each iconList as { id, name, icon }, i}
               <HeaderButton {icon} text={name} {id} />
             {/each}
@@ -36,7 +36,7 @@
         class="simple"
       >
         <span class="gr-icon">
-          <Gymrevenue/>
+          <Gymrevenue />
         </span>
       </div>
     {/if}

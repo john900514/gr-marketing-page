@@ -9,7 +9,7 @@
   on:mouseenter={() => (hovering = true)}
   on:mouseleave={() => (hovering = false)}
 >
-    <svelte:component this={icon} />
+  <svelte:component this={icon} />
   {#if hovering}
     <span>{text}</span>
   {/if}
@@ -17,7 +17,7 @@
 
 <style lang="postcss">
   a {
-    @apply text-accent-content flex flex-col h-16 w-16 items-center justify-end;
+    @apply text-accent-content flex flex-col h-16 w-16 items-center justify-end pb-4;
     @apply hover:bg-primary;
 
     span {

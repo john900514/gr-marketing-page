@@ -83,14 +83,16 @@
     <button type="submit">NEXT</button>
   </form>
 {:else}
-  <div class="wrap"><div class="submitted">Your message has been sent to our team</div> </div>
+  <div class="wrap">
+    <div class="submitted">Your message has been sent to our team</div>
+  </div>
 {/if}
 
 <style lang="postcss">
   form {
-    width: calc(100% - 4rem); 
+    width: calc(100% - 4rem);
     @apply bg-neutral-900 border-4 border-secondary rounded-3xl mb-8 mx-auto max-w-full lg:max-w-[50rem] relative z-[1];
-    @apply flex flex-col px-12 py-4 lg:mb-[10rem];
+    @apply flex flex-col px-6 lg:px-12 py-4 lg:mb-[10rem];
 
     fieldset {
       @apply leading-none my-4 mb-4;
@@ -142,10 +144,10 @@
     }
   }
 
-  .submitted{
+  .submitted {
     @apply alert alert-success;
   }
-  .wrap{
+  .wrap {
     @apply container m-auto my-8;
   }
 </style>

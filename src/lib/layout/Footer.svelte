@@ -15,10 +15,14 @@
   <nav>
     <ul>
       <li>
-        <Insta_icon />
+        <a href="https://www.instagram.com/gymrevenue/">
+          <Insta_icon />
+        </a>
       </li>
       <li>
-        <Linkedin_icon />
+        <a href="https://www.linkedin.com/company/gymrevenue/">
+          <Linkedin_icon />
+        </a>
       </li>
     </ul>
   </nav>
