@@ -18,3 +18,4 @@
 - changed Icons from being loaded in an img tag to being loaded inline, so we can style the fill color.
 - added Mullish Typeface
 - redid bg images as absolute position images so we could use screen filter
+- switched out svelte-carousel for swiper/svelte

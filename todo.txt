@@ -3,7 +3,6 @@ ASAP:
 - fix mobile text content being cut off
 - fix mobile horizontal overflow issue
 - add in the Video
-- Swiper instead of Carousel for overhang
 - favicon GR logo.
 - fix cutoff icons
 

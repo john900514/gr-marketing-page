@@ -3,6 +3,8 @@
   import "@fontsource/mulish/700.css"; // Defaults to weight 400.
   import "@fontsource/mulish/300.css"; // Defaults to weight 400.
   import "../app.css";
+  import 'swiper/css';
+//   import "swiper/css/pagination";
   import Header from "$lib/layout/Header.svelte";
   import Footer from "$lib/layout/Footer.svelte";
 </script>

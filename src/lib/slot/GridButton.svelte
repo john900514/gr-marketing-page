@@ -13,6 +13,9 @@
 {/if}
 
 <style lang="postcss">
+  button,div{
+    @apply btn btn-outline btn-secondary;
+  }
   button,
   div {
     @apply text-secondary bg-neutral-900 text-[1rem] leading-[1.2] lg:leading-none lg:text-lg font-bold uppercase;

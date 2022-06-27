@@ -1,19 +1,10 @@
 <script>
-  import { onMount } from "svelte";
   import GridButton from "$lib/slot/GridButton.svelte";
+  import { Swiper, SwiperSlide } from 'swiper/svelte';
 
   export let btns,
     title = "",
     showbg = false;
-
-  let Carousel; // for saving Carousel component class
-  let carousel; // for calling methods of the carousel instance
-  onMount(async () => {
-    const module = await import("svelte-carousel");
-    console.log(module);
-
-    Carousel = module.default;
-  });
 
   let mobile_grp1 = [btns[0], btns[1], btns[2]];
   let mobile_grp2 = [btns[3], btns[4], btns[5]];
@@ -41,39 +32,29 @@
   <h2>{title}</h2>
 
   <div class="matrix-container">
-    <svelte:component
-      this={Carousel}
-      bind:this={carousel}
-      particlesToShow={1}
-      particlesToScroll={1}
-      arrows={false}
-      let:currentPageIndex
-      let:pagesCount
-      let:showPage
-    >
-      <div slot="dots" class="mydots">
-        {#each mobile_btns as _, pageIndex (pageIndex)}
-          <button
-            class="swipebtn"
-            on:click={() => showPage(pageIndex)}
-            active={currentPageIndex === pageIndex}
-          />
-        {/each}
-      </div>
-      {#each mobile_btns as btn, i (btn)}
-        <div class="matrix-col">
-          <GridButton>
-            {btn[0]}
-          </GridButton>
-          <GridButton>
-            {btn[1]}
-          </GridButton>
-          <GridButton>
-            {btn[2]}
-          </GridButton>
-        </div>
-      {/each}
-    </svelte:component>
+    <Swiper
+    centeredSlides={true}
+    spaceBetween={0}
+    slidesPerView={1.4}
+    on:slideChange={() => console.log('slide change')}
+    on:swiper={(e) => console.log(e.detail[0])}
+  >
+  {#each mobile_btns as btn, i (btn)}
+  <SwiperSlide>
+    <div class="matrix-col grid grid-cols-1 grid-rows-3 gap-4">
+      <GridButton>
+        {btn[0]}
+      </GridButton>
+      <GridButton>
+        {btn[1]}
+      </GridButton>
+      <GridButton>
+        {btn[2]}
+      </GridButton>
+    </div>
+  </SwiperSlide>
+{/each}
+  </Swiper>
   </div>
 </div>
 <!-- desktop below -->
