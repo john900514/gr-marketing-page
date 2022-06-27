@@ -10,17 +10,17 @@
     <span>logo animation</span>
   </div> -->
 
-  <Gymrevenue />
-
+  <!-- <Gymrevenue /> -->
+ <img src="/logo.svg" alt="GymRevenue Logo" class="m-auto"/>
   <nav>
     <ul>
       <li>
-        <a href="https://www.instagram.com/gymrevenue/">
+        <a href="https://www.instagram.com/gymrevenue/" target="__blank">
           <Insta_icon />
         </a>
       </li>
       <li>
-        <a href="https://www.linkedin.com/company/gymrevenue/">
+        <a href="https://www.linkedin.com/company/gymrevenue/"  target="__blank">
           <Linkedin_icon />
         </a>
       </li>
