@@ -7,7 +7,7 @@
   viewBox="0 0 25.587 25.484"
 >
   <defs>
-    <clipPath id="clip-path">
+    <clipPath id="mass_comm_icon-clip-path">
       <rect
         id="Rectangle_1499"
         data-name="Rectangle 1499"
@@ -17,7 +17,7 @@
       />
     </clipPath>
   </defs>
-  <g id="Group_639" data-name="Group 639" clip-path="url(#clip-path)">
+  <g id="Group_639" data-name="Group 639" clip-path="url(#mass_comm_icon-clip-path)">
     <path
       id="Path_2684"
       data-name="Path 2684"
