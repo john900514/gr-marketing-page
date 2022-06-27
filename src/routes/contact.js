@@ -1,16 +1,34 @@
 import Mailgun from "mailgun.js";
 import formData from "form-data";
+import dotenv from 'dotenv';
+
+dotenv.config();
+
 // import { getFormBody } from "./__utils";
 
-const API_KEY = "450a0212c7352bcc84d8feb5b05205d2-2b0eef4c-99b3599c";
-const DOMAIN = "crm.gymrevenue.com";
-const SEND_FROM = "noreply@gymrevenue.com";
-const SEND_TO = "info@gymrevenue.com";
-// const SEND_TO = "philip@capeandbay.com";
-const SUBJECT = "[gymrevenue.com] - New Contact Form Submission!";
+const SEND_TO = process.env.SEND_TO;
+if(!SEND_TO){
+  throw new Error("SEND_TO ENV VAR NOT SET!");
+}
+const MAILGUN_API_KEY = process.env.MAILGUN_API_KEY;
+if(!MAILGUN_API_KEY){
+  throw new Error("MAILGUN_API_KEY ENV VAR NOT SET!");
+}
+const SEND_FROM = process.env.SEND_FROM;
+if(!SEND_FROM){
+  throw new Error("SEND_FROM ENV VAR NOT SET!");
+}
+const MAIL_DOMAIN = process.env.MAIL_DOMAIN;
+if(!MAIL_DOMAIN){
+  throw new Error("MAIL_DOMAIN ENV VAR NOT SET!");
+}
+const MAIL_SUBJECT = process.env.MAIL_SUBJECT;
+if(!MAIL_SUBJECT){
+  throw new Error("MAIL_SUBJECT ENV VAR NOT SET!");
+}
 
 const mailgun = new Mailgun(formData);
-const client = mailgun.client({ username: "api", key: API_KEY });
+const client = mailgun.client({ username: "api", key: MAILGUN_API_KEY });
 
 export const post = async ({request}) => {
     const data = await request.json()
@@ -24,8 +42,12 @@ export const post = async ({request}) => {
         msg += `${key}: ${val} \r\n`;
     });
 
+    console.log('Attemping to sendMail...');
+    console.log({msg});
+    console.log({SEND_FROM, SEND_TO, MAIL_SUBJECT, MAIL_DOMAIN, MAILGUN_API_KEY})
+
   try {
-    sendMail(SEND_FROM, SEND_TO, SUBJECT, msg);
+    sendMail(SEND_FROM, SEND_TO, MAIL_SUBJECT, msg);
   } catch (e) {
     return {
       status: 500,
@@ -51,7 +73,7 @@ const sendMail = async (
   };
 
   client.messages
-    .create(DOMAIN, messageData)
+    .create(MAIL_DOMAIN, messageData)
     .then((res) => {
       console.log(res);
     })
