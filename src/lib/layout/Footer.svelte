@@ -2,16 +2,19 @@
   import Insta_icon from "$lib/components/icons/Insta_icon.svelte";
   import Linkedin_icon from "$lib/components/icons/Linkedin_icon.svelte";
 
-  import Gymrevenue from "$lib/components/icons/Gymrevenue.svelte";
+  // import Gymrevenue from "$lib/components/icons/Gymrevenue.svelte";
+  import BackToTop from "$lib/components/BackToTop.svelte";
 </script>
 
 <footer>
-  <!-- <div class="cool-animation-thing">
-    <span>logo animation</span>
-  </div> -->
+  <picture>
+    <source srcset="prefooter.png" media="(min-width: 30rem)" />
+    <img src="products/prefooter_m.png" alt="" class="m-auto md:max-w-[36vw]"/>
+  </picture>
 
+  <BackToTop class="hidden md:block" />
   <!-- <Gymrevenue /> -->
- <img src="/logo.svg" alt="GymRevenue Logo" class="m-auto"/>
+  <img src="/logo.svg" alt="GymRevenue Logo" class="m-auto" />
   <nav>
     <ul>
       <li>
@@ -20,7 +23,7 @@
         </a>
       </li>
       <li>
-        <a href="https://www.linkedin.com/company/gymrevenue/"  target="__blank">
+        <a href="https://www.linkedin.com/company/gymrevenue/" target="__blank">
           <Linkedin_icon />
         </a>
       </li>

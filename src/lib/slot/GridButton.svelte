@@ -14,7 +14,7 @@
 
 <style lang="postcss">
   button,div{
-    @apply btn btn-outline btn-secondary;
+    @apply btn btn-outline btn-secondary min-h-[8rem] md:min-h-[unset];
   }
   button,
   div {

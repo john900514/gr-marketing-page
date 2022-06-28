@@ -8,7 +8,7 @@
     solution that is ACTUALLY an all-in-one solution.
   </p>
 
-  <!-- <button>WATCH THE VIDEO</button> -->
+  <a href="#video-section" class="btn btn-secondary bg-secondary rounded-full mt-8">WATCH THE VIDEO</a>
 </div>
 
 <style lang="postcss">

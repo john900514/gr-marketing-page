@@ -12,3 +12,5 @@ export {default as LeaderboardSection} from "./LeaderboardSection.svelte";
 export {default as KeyFeatures} from "./KeyFeatures.svelte";
 export {default as UpcomingFeatures} from "./UpcomingFeatures.svelte";
 export {default as DemoSection} from "./DemoSection.svelte";
+export {default as NewsSection} from "./NewsSection.svelte";
+export {default as VideoSection} from "./VideoSection.svelte";

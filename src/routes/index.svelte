@@ -13,7 +13,9 @@
     GoalsSection,
     LeaderboardSection,
     UpcomingFeatures,
-    DemoSection
+    DemoSection,
+    VideoSection,
+    NewsSection
   } from "$lib/page-sections";
 
 </script>
@@ -32,6 +34,8 @@
 
 <EmployeeSection />
 
+<VideoSection/>
+
 <TaskSection />
 
 <DripSection />
@@ -45,6 +49,8 @@
 <DemoSection/>
 
 <UpcomingFeatures/>
+
+<NewsSection/>
 
 <style lang="postcss">
   /* consider factoring out a "Page Section" component that has this CSS, and handles setting up the BG images */

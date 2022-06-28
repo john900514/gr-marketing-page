@@ -5,6 +5,10 @@
 @layer base {
   :root {
     --heroBg: url("combg/hero_bg_overlay_m.png");
+    --btn-text-case: capitalize;
+    --swiper-pagination-bullet-size: 1rem;
+    --swiper-pagination-bullet-inactive-color: white;
+    scroll-padding-top: 10rem;
   }
 
   h1 {
@@ -21,6 +25,10 @@
 
   button {
     @apply transition-all duration-500;
+  }
+
+  .noscroll{
+    @apply overflow-hidden;
   }
 }
 

@@ -6,6 +6,6 @@
 </section>
 <style>
     section{
-        @apply overflow-x-hidden overflow-y-clip max-w-[100vw] relative;
+        @apply overflow-x-hidden overflow-y-hidden overflow-y-clip max-w-[100vw] relative;
     }
 </style>

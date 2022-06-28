@@ -1,6 +1,7 @@
 <script>
   import GridButton from "$lib/slot/GridButton.svelte";
   import { Swiper, SwiperSlide } from 'swiper/svelte';
+  import {Pagination} from "swiper";
 
   export let btns,
     title = "",
@@ -38,6 +39,8 @@
     slidesPerView={1.4}
     on:slideChange={() => console.log('slide change')}
     on:swiper={(e) => console.log(e.detail[0])}
+    modules={[Pagination]}
+    pagination={{ clickable: true }}
   >
   {#each mobile_btns as btn, i (btn)}
   <SwiperSlide>
@@ -159,5 +162,8 @@
       grid-template-columns: repeat(3, minmax(0, 20rem));
       grid-template-rows: repeat(4, 6rem);
     }
+  }
+  :global(.swiper-wrapper){
+    @apply mb-16;
   }
 </style>
