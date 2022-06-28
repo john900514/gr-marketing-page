@@ -45,7 +45,7 @@
             <MobileMenu class="md:hidden">
               <a  href="#news" class="news-btn">News</a>
             </MobileMenu>
-            <a class="news-btn !hidden md:!block" href="#news">News</a>
+            <a class="news-btn !hidden md:!inline-flex" href="#news">News</a>
           </div>
         </nav>
       </div>
